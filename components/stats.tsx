@@ -1,16 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { SectionBackground } from '@/components/section-background'
 import { Button } from '@/components/ui/button'
 import { ShieldCheck, Sun, Leaf, Anchor, Droplet } from 'lucide-react'
 
 const stats = [
   {
-    icon: ShieldCheck,
-    value: '100% Solids',
-    label: 'Formulation',
-    detail: 'With no VOCs or solvents',
-    color: '#00B4D8',
+    icon: null,
+    value: 'Eco-Friendly',
+    label: 'Certified',
+    detail: 'The only certified marine-life-safe product on the market, protecting our oceans.',
+    color: '#2ECC71',
+    customIcon: true,
   },
   {
     icon: Sun,
@@ -38,8 +38,7 @@ const stats = [
 
 export function Stats() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-10 lg:py-20">
-      <SectionBackground />
+    <section className="relative overflow-hidden bg-[#000c18] py-20 lg:py-24">
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header with Logo */}
@@ -53,12 +52,12 @@ export function Stats() {
               className="w-72 h-20 sm:w-56 sm:h-36 lg:w-80 lg:h-40 object-contain mx-auto"
             />
           </div>
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60 mb-4">Discover the Aquaphobix Advantage</p>
+          <p className="text-xs uppercase tracking-[0.35em] text-white/75 mb-4">Discover the Aquaphobix Advantage</p>
           <h2 className="text-3xl md:text-4xl font-display font-semibold text-white mb-4">
             Proven protection engineered for marine environments.
           </h2>
           <p className="text-sm md:text-base text-white/70">
-            Key performance markers that define Aquaphobix technology when applied by Ocean Armour's certified team.
+            Our coating systems combine cutting-edge marine engineering with environmental responsibility.
           </p>
         </div>
 
@@ -78,7 +77,19 @@ export function Stats() {
                     backgroundColor: `${stat.color}15`,
                   }}
                 >
-                  <Icon className="w-6 h-6" style={{ color: stat.color }} />
+                  {stat.customIcon ? (
+                    <svg 
+                      className="w-6 h-6" 
+                      viewBox="0 0 576 512" 
+                      xmlns="http://www.w3.org/2000/svg"
+                      style={{ color: stat.color }}
+                      fill="currentColor"
+                    >
+                      <path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z" />
+                    </svg>
+                  ) : Icon ? (
+                    <Icon className="w-6 h-6" style={{ color: stat.color }} />
+                  ) : null}
                 </div>
 
                 {/* Content */}
