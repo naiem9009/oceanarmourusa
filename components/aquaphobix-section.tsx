@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export function AquaphobixSection() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18]">
+    <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18]">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#00B4D8]/10 blur-3xl" />
@@ -15,18 +15,20 @@ export function AquaphobixSection() {
         {/* Center content */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
           {/* Logo and branding */}
-          <div className="flex flex-col items-center gap-6 mb-8">
-            <span className="text-xs uppercase tracking-widest font-bold text-[#00B4D8]">Technology Partner</span>
+          <div className="flex flex-col items-center gap-6 mb-12">
+            <Image
+              src="/images/AQUAPHOBIX_LOGO.png"
+              alt="Aquaphobix Technology"
+              width={200}
+              height={80}
+              className="w-72 h-20 sm:w-56 sm:h-36 lg:w-80 lg:h-40 object-contain"
+            />
             
-             <Image
-               src="/images/AQUAPHOBIX_LOGO.png"
-               alt="Aquaphobix Technology"
-               width={200}
-               height={200}
-               className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain"
-             />
-            
-            <div className="flex flex-col gap-2">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold text-white leading-tight max-w-3xl">
+              Aquaphobix technology engineered for clean, long-term marine protection.
+            </h3>
+
+            <div className="flex flex-col items-center gap-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white">
                 Aquaphobix
               </h2>

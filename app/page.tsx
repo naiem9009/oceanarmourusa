@@ -13,7 +13,7 @@ export default function Page() {
       <Header />
       <Hero />
       <Stats />
-      <TechnologyPreview />
+      {/* <TechnologyPreview /> */}
       <Process />
       <Faqs limit={4} />
       <CTA />
