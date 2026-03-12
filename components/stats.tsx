@@ -6,7 +6,7 @@ import { ShieldCheck, Sun, Leaf, Anchor, Droplet } from 'lucide-react'
 const stats = [
   {
     icon: null,
-    value: 'Eco-Friendly',
+    value: '100% Eco-Friendly',
     label: 'Certified',
     detail: 'The only certified marine-life-safe product on the market, protecting our oceans.',
     color: '#2ECC71',
