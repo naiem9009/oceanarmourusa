@@ -2,27 +2,27 @@
 
 import Image from 'next/image'
 import { ShieldCheck, Leaf, Sun, Droplet } from 'lucide-react'
-import heroImage from '@/public/images/hero_oceanarmour_boat_work.jpg'
+import heroImage from '@/public/images/hero_oceanarmour_boat_work.webp'
 
 const highlights = [
   {
-    title: '5-Year Warranty',
-    description: 'Applied once for years of protection with industry-leading coverage.',
+    title: '5-Year Protection System',
+    description: 'Single application engineered for long service intervals and reduced haul-out cycles.',
     icon: ShieldCheck,
   },
   {
     title: 'Zero Toxic Biocides',
-    description: 'No heavy metals, no leaching, and compliant with evolving regulations.',
+    description: 'Environmentally safe formula with no heavy metals or leaching.',
     icon: Leaf,
   },
   {
-    title: '3000-Hour UV Tested',
-    description: 'Verified performance retention for sun exposure year after year.',
+    title: 'Hydrodynamic Efficiency',
+    description: 'Reduces drag and improves fuel efficiency across all vessel sizes.',
     icon: Sun,
   },
   {
-    title: 'Power-Washable',
-    description: 'Clean the surface even underwater to minimize maintenance downtime.',
+    title: 'Power-Washable Surface',
+    description: 'Easy maintenance even underwater to minimize downtime.',
     icon: Droplet,
   },
 ]
