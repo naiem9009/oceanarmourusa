@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export function AquaphobixSection() {
   return (
-    <section className="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-[#000c18] via-[#001a2e] to-[#000c18]">
+    <section className="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18]">
       {/* Background decorative elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#00B4D8]/10 blur-3xl" />
@@ -20,13 +20,13 @@ export function AquaphobixSection() {
           <div className="flex flex-col items-center gap-6 mb-8">
             <span className="text-xs uppercase tracking-widest font-bold text-[#00B4D8]">Technology Partner</span>
             
-            <Image
-              src="/images/AQUAPHOBIX_LOGO.png"
-              alt="Aquaphobix Technology"
-              width={150}
-              height={150}
-              className="w-28 h-28 sm:w-36 sm:h-36 lg:w-40 lg:h-40 object-contain"
-            />
+             <Image
+               src="/images/AQUAPHOBIX_LOGO.png"
+               alt="Aquaphobix Technology"
+               width={200}
+               height={200}
+               className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain"
+             />
             
             <div className="flex flex-col gap-2">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white">

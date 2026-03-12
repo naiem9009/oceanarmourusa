@@ -56,7 +56,7 @@ const pillarCardStyles = [
 
 export function TechnologyPreview() {
   return (
-    <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-24 lg:py-28">
       <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

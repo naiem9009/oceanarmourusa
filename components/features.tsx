@@ -1,114 +1,76 @@
 import { SectionBackground } from '@/components/section-background'
-import { Anchor, Gauge, Leaf, ShieldCheck, Sun, Timer } from 'lucide-react'
 
 const features = [
   {
-    icon: ShieldCheck,
-    title: '5-Year Protection System',
-    description: 'Single application engineered for long service intervals and reduced haul-out cycles.',
-    metric: 'Warranty-backed',
+    title: '5-Year Warranty',
+    description: 'Full coverage protection for your vessel',
+    color: '#00B4D8',
   },
   {
-    icon: Leaf,
-    title: 'Zero Toxic Biocides',
-    description: 'No heavy metals or leaching, compliant with evolving environmental regulations.',
-    metric: 'Clean waterways',
+    title: 'Zero Biocides',
+    description: 'Eco-friendly and environmentally safe',
+    color: '#2ECC71',
   },
   {
-    icon: Sun,
     title: '3000-Hour UV Tested',
-    description: 'Verified performance retention under harsh sun exposure year after year.',
-    metric: 'UV stable',
+    description: 'Proven durability under sun exposure',
+    color: '#00B4D8',
   },
   {
-    icon: Gauge,
-    title: 'Hydrodynamic Efficiency',
-    description: 'Lower drag for improved fuel efficiency and performance across vessel sizes.',
-    metric: 'Reduced drag',
+    title: '850 PSI Bond',
+    description: 'Superior adhesion strength',
+    color: '#2ECC71',
   },
   {
-    icon: Anchor,
-    title: '850 PSI Bond Strength',
-    description: 'High-adhesion coating system built for long-term durability and corrosion resistance.',
-    metric: 'High adhesion',
+    title: 'Hydrodynamic Design',
+    description: 'Improved fuel efficiency and performance',
+    color: '#00B4D8',
   },
   {
-    icon: Timer,
-    title: 'Power-Washable Surface',
-    description: 'Easy maintenance, even underwater, to minimize downtime and service cost.',
-    metric: 'Simple upkeep',
-  },
-]
-
-const featureCardStyles = [
-  {
-    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/10',
-    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.2),rgba(0,24,38,0.84))] group-hover:bg-[linear-gradient(160deg,rgba(0,180,216,0.3),rgba(0,28,44,0.92))]',
-    icon: 'bg-[#00B4D8]/25 text-[#9feeff]',
-  },
-  {
-    outer: 'border-[#2ECC71]/35 bg-[#2ECC71]/10',
-    inner: 'bg-[linear-gradient(160deg,rgba(46,204,113,0.2),rgba(0,24,38,0.84))] group-hover:bg-[linear-gradient(160deg,rgba(46,204,113,0.3),rgba(0,28,44,0.92))]',
-    icon: 'bg-[#2ECC71]/25 text-[#9dffc4]',
-  },
-  {
-    outer: 'border-[#6ed0ff]/35 bg-[#6ed0ff]/10',
-    inner: 'bg-[linear-gradient(160deg,rgba(110,208,255,0.2),rgba(0,24,38,0.84))] group-hover:bg-[linear-gradient(160deg,rgba(110,208,255,0.3),rgba(0,28,44,0.92))]',
-    icon: 'bg-[#6ed0ff]/25 text-[#b8ebff]',
+    title: 'Power-Washable',
+    description: 'Easy maintenance and simple upkeep',
+    color: '#2ECC71',
   },
 ]
 
 export function Features() {
   return (
-    <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-20 lg:py-28">
       <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr] lg:items-end">
-          <div className="space-y-5">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/60">Aquaphobix Advantage</p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-white leading-tight">
-              A smarter marine coating system for performance and protection.
-            </h2>
-            <p className="text-lg text-white/70 max-w-2xl">
-              Ocean Armour delivers licensed Aquaphobix application with proven hydrodynamics,
-              long-term durability, and environmentally clean protection.
-            </p>
-          </div>
-          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
-            <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">5-Year Warranty</span>
-            <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Zero Biocides</span>
-            <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">850 PSI Bond</span>
-            <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Power-Washable</span>
-          </div>
+        {/* Section Header */}
+        <div className="text-center mb-16 max-w-2xl mx-auto">
+          <p className="text-xs uppercase tracking-[0.35em] text-white/60 mb-4">Key Features</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-white">
+            Professional Marine Protection
+          </h2>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature, index) => {
-            const Icon = feature.icon
-            const style = featureCardStyles[index % featureCardStyles.length]
-            return (
+        {/* Features Grid - Text Based */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="flex flex-col gap-3"
+            >
+              {/* Colored Line Accent */}
               <div
-                key={feature.title}
-                className={`group rounded-2xl border p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] ${style.outer}`}
-              >
-                <div className={`h-full rounded-2xl p-6 transition duration-300 ${style.inner}`}>
-                  <div className="flex items-center justify-between">
-                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${style.icon}`}>
-                      <Icon className="h-6 w-6" />
-                    </div>
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">
-                      {feature.metric}
-                    </span>
-                  </div>
-                  <div className="mt-4 space-y-2">
-                    <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
-                    <p className="text-sm text-white/70">{feature.description}</p>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
+                className="h-1 w-8 rounded-full"
+                style={{ backgroundColor: feature.color }}
+              />
+
+              {/* Title */}
+              <h3 className="text-lg sm:text-xl font-semibold text-white">
+                {feature.title}
+              </h3>
+
+              {/* Description */}
+              <p className="text-sm sm:text-base text-white/70 leading-relaxed">
+                {feature.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

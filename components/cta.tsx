@@ -5,7 +5,7 @@ import { ArrowRight, Mail, Phone } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section id="cta" className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
+    <section id="cta" className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-24 lg:py-28">
       <SectionBackground />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
