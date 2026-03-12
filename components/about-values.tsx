@@ -73,7 +73,7 @@ export function AboutValues() {
                   <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${style.icon}`}>
                     <Icon className="h-6 w-6" />
                   </div>
-                  <h3 className="mt-4 text-lg font-semibold text-white">{value.title}</h3>
+                  <h3 className="mt-4 text-lg font-display font-semibold text-white">{value.title}</h3>
                   <p className="mt-2 text-sm text-white/70">{value.description}</p>
                 </div>
               </div>

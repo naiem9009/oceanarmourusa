@@ -101,7 +101,7 @@ export function TechnologyComparison() {
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
           <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/8 p-[1px] shadow-[0_22px_55px_rgba(0,180,216,0.2)]">
             <div className="rounded-[30px] bg-[linear-gradient(160deg,rgba(0,180,216,0.16),rgba(0,24,38,0.86))] p-6 md:p-7 text-white">
-              <h3 className="text-xl font-semibold text-white">Key Attributes</h3>
+              <h3 className="text-xl font-display font-semibold text-white">Key Attributes</h3>
               <div className="mt-6 space-y-6">
                 {attributes.map((section) => (
                   <div key={section.title} className="space-y-3">
@@ -122,7 +122,7 @@ export function TechnologyComparison() {
 
           <div className="rounded-[32px] border border-[#2ECC71]/30 bg-[#2ECC71]/8 p-[1px] shadow-[0_22px_55px_rgba(46,204,113,0.18)]">
             <div className="rounded-[30px] bg-[linear-gradient(160deg,rgba(46,204,113,0.14),rgba(0,24,38,0.86))] p-6 md:p-7 text-white">
-              <h3 className="text-xl font-semibold text-white">Performance Properties</h3>
+              <h3 className="text-xl font-display font-semibold text-white">Performance Properties</h3>
               <div className="mt-6 space-y-6">
                 {performance.map((section) => (
                   <div key={section.title} className="space-y-3">

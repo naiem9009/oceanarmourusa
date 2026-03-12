@@ -99,7 +99,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
                 <Accordion type="single" collapsible className="w-full">
                   {visibleFaqs.map((faq, index) => (
                     <AccordionItem key={faq.question} value={faq.question} className="border-white/10">
-                      <AccordionTrigger className="text-left text-white hover:text-[#6ed0ff]">
+                      <AccordionTrigger className="text-left text-white hover:text-[#6ed0ff] font-display font-semibold">
                         <span className="mr-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[10px] uppercase tracking-[0.2em] text-white/70">
                           {String(index + 1).padStart(2, '0')}
                         </span>
@@ -120,7 +120,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
               <Accordion type="single" collapsible className="w-full">
                 {visibleFaqs.map((faq, index) => (
                   <AccordionItem key={faq.question} value={faq.question} className="border-white/10">
-                    <AccordionTrigger className="text-left text-white hover:text-[#6ed0ff]">
+                    <AccordionTrigger className="text-left text-white hover:text-[#6ed0ff] font-display font-semibold">
                       <span className="mr-4 inline-flex h-7 w-7 items-center justify-center rounded-full border border-white/15 bg-white/5 text-[10px] uppercase tracking-[0.2em] text-white/70">
                         {String(index + 1).padStart(2, '0')}
                       </span>
@@ -139,7 +139,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="rounded-3xl border border-[#2ECC71]/30 bg-[#2ECC71]/10 p-6 md:p-7 text-white">
             <div className="flex items-center justify-between">
-              <h3 className="text-xl font-semibold">Need a deeper dive?</h3>
+              <h3 className="text-xl font-display font-semibold">Need a deeper dive?</h3>
               <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/80">
                 Support
               </span>
@@ -160,7 +160,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
           <div className="rounded-3xl border border-[#00B4D8]/30 bg-[#00B4D8]/8 p-[1px] shadow-[0_20px_50px_rgba(0,180,216,0.2)]">
             <div className="rounded-3xl bg-[#001826]/80 p-6 md:p-7">
               <div className="flex items-center justify-between">
-                <h4 className="text-lg font-semibold text-white">Aquaphobix Overview Video</h4>
+                <h4 className="text-lg font-display font-semibold text-white">Aquaphobix Overview Video</h4>
               </div>
               {videoUrl ? (
                 <div className="group relative mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#000f1d] shadow-[0_18px_45px_rgba(0,0,0,0.4)]">

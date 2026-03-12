@@ -58,7 +58,7 @@ export function AboutStory() {
                       <Icon className="h-5 w-5 text-[#6ed0ff]" />
                     </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      <h3 className="text-lg font-display font-semibold text-white">{item.title}</h3>
                       <p className="text-sm text-white/70">{item.detail}</p>
                     </div>
                   </div>

@@ -40,7 +40,7 @@ export function TechnologyOverview() {
           <div className="rounded-[32px] border border-[#6ed0ff]/30 bg-[#6ed0ff]/8 p-[1px] shadow-[0_22px_55px_rgba(110,208,255,0.2)]">
             <div className="rounded-[30px] bg-[#001826]/85 p-6 md:p-7 text-white">
               <div className="flex items-center justify-between">
-                <h3 className="text-lg font-semibold">Coating Color Options</h3>
+                <h3 className="text-lg font-display font-semibold">Coating Color Options</h3>
                 <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/80">
                   Palette
                 </span>

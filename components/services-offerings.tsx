@@ -109,7 +109,7 @@ export function ServicesOfferings() {
                       <Icon className="h-6 w-6" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+                       <h3 className="text-xl font-display font-semibold text-white">{service.title}</h3>
                       <p className="text-sm text-white/70">{service.description}</p>
                     </div>
                   </div>

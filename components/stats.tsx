@@ -95,7 +95,7 @@ export function Stats() {
                 {/* Content */}
                 <div className="flex flex-col gap-2">
                   {/* Value - Large & Bold */}
-                  <div className="text-3xl sm:text-4xl font-bold text-white leading-tight">
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white leading-tight">
                     {stat.value}
                   </div>
 

@@ -22,7 +22,7 @@ export function Footer() {
                   <span className="h-2 w-2 rounded-full bg-[#6ed0ff]" />
                   Service Area
                 </div>
-                <h3 className="text-3xl md:text-4xl font-semibold leading-tight">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold leading-tight">
                   Broward & Palm Beach
                   <span className="block text-[#6ed0ff]">Marine Coatings</span>
                 </h3>
@@ -102,7 +102,7 @@ export function Footer() {
 
         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <h4 className="text-base font-semibold mb-4">Explore</h4>
+            <h4 className="text-lg md:text-xl font-display font-semibold mb-4">Explore</h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
                 <Link href="/technology" className="transition hover:text-[#6ed0ff]">
@@ -123,7 +123,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold mb-4">Company</h4>
+            <h4 className="text-lg md:text-xl font-display font-semibold mb-4">Company</h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li>Ocean Armour</li>
               <li>Aquaphobix Licensed Dealer</li>
@@ -133,7 +133,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-base font-semibold mb-4">Contact</h4>
+            <h4 className="text-lg md:text-xl font-display font-semibold mb-4">Contact</h4>
             <ul className="space-y-4 text-sm text-white/70">
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 text-[#6ed0ff] flex-shrink-0" />

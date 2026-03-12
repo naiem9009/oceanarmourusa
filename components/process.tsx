@@ -94,7 +94,7 @@ export function Process() {
                   <div className="mt-5 space-y-3">
                     <div className="flex items-center gap-2">
                       <CheckCircle2 className={`h-5 w-5 ${style.check}`} />
-                      <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+                      <h3 className="text-lg font-display font-semibold text-white">{step.title}</h3>
                     </div>
                     <p className="text-sm text-white/70">{step.description}</p>
                   </div>

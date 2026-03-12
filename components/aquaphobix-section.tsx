@@ -51,7 +51,7 @@ export function AquaphobixSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-white">Superior Bond</h3>
+               <h3 className="font-display font-semibold text-white">Superior Bond</h3>
               <p className="text-sm text-white/60">850 PSI adhesion strength</p>
             </div>
 
@@ -61,7 +61,7 @@ export function AquaphobixSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-white">Eco-Friendly</h3>
+               <h3 className="font-display font-semibold text-white">Eco-Friendly</h3>
               <p className="text-sm text-white/60">Zero biocides formula</p>
             </div>
 
@@ -71,7 +71,7 @@ export function AquaphobixSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m7 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="font-semibold text-white">Long-Lasting</h3>
+               <h3 className="font-display font-semibold text-white">Long-Lasting</h3>
               <p className="text-sm text-white/60">5-year warranty protection</p>
             </div>
           </div>
