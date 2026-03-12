@@ -1,12 +1,15 @@
+import Image from 'next/image'
+import Link from 'next/link'
 import { SectionBackground } from '@/components/section-background'
-import { ShieldCheck, Sun, Anchor, Droplet } from 'lucide-react'
+import { Button } from '@/components/ui/button'
+import { ShieldCheck, Sun, Leaf, Anchor, Droplet } from 'lucide-react'
 
 const stats = [
   {
     icon: ShieldCheck,
-    value: '5-Year',
-    label: 'Warranty Coverage',
-    detail: 'Applied once for years of protection and reduced haul-out cycles.',
+    value: '100% Solids',
+    label: 'Formulation',
+    detail: 'With no VOCs or solvents',
     color: '#00B4D8',
   },
   {
@@ -25,23 +28,33 @@ const stats = [
   },
   {
     icon: Droplet,
-    value: 'Zero Biocides',
-    label: 'Eco-Friendly',
-    detail: 'Environmental responsibility without compromising performance.',
-    color: '#2ECC71',
-  },
+    value: 'Works On',
+    label: 'Aluminum, Steel',
+    detail: 'Fiberglass',
+    color: '#00B4D8',
+    highlight: true,
+  }
 ]
 
 export function Stats() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-10 lg:py-20">
       <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-2xl space-y-3 mb-16">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Performance Metrics</p>
-          <h2 className="text-3xl md:text-4xl font-display font-semibold text-white">
+        {/* Section Header with Logo */}
+        <div className="flex flex-col items-center text-center mb-16 max-w-2xl mx-auto">
+          <div className="mb-10">
+            <Image
+              src="/images/AQUAPHOBIX_LOGO.png"
+              alt="Aquaphobix Logo"
+              width={200}
+              height={80}
+              className="w-72 h-20 sm:w-56 sm:h-36 lg:w-80 lg:h-40 object-contain mx-auto"
+            />
+          </div>
+          <p className="text-xs uppercase tracking-[0.35em] text-white/60 mb-4">Discover the Aquaphobix Advantage</p>
+          <h2 className="text-3xl md:text-4xl font-display font-semibold text-white mb-4">
             Proven protection engineered for marine environments.
           </h2>
           <p className="text-sm md:text-base text-white/70">
@@ -49,7 +62,7 @@ export function Stats() {
           </p>
         </div>
 
-        {/* Stats Grid - Minimal Design */}
+        {/* Stats Grid - 6 Boxes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {stats.map((stat) => {
             const Icon = stat.icon
@@ -81,20 +94,24 @@ export function Stats() {
                   </div>
 
                   {/* Detail */}
-                  <p className="text-sm text-white/60 leading-relaxed mt-1">
-                    {stat.detail}
-                  </p>
+                  {stat.detail && (
+                    <p className="text-sm sm:text-base font-semibold text-white/80 leading-relaxed mt-1">
+                      {stat.detail}
+                    </p>
+                  )}
                 </div>
               </div>
             )
           })}
         </div>
 
-        {/* Location Info - Below Stats */}
-        <div className="mt-16 flex justify-end">
-          <div className="text-xs uppercase tracking-[0.3em] text-white/55">
-            Broward & Palm Beach Counties
-          </div>
+        {/* CTA Button */}
+        <div className="flex justify-center mt-16">
+          <Button asChild className="rounded-full bg-[#00B4D8] hover:bg-[#0095b8] text-white font-semibold px-8 py-3 transition-colors">
+            <Link href="/technology">
+              Explore the Technology
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
