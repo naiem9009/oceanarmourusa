@@ -1,6 +1,5 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
-import { Features } from '@/components/features'
 import { Process } from '@/components/process'
 import { Stats } from '@/components/stats'
 import { TechnologyPreview } from '@/components/technology-preview'
@@ -13,7 +12,6 @@ export default function Page() {
     <>
       <Header />
       <Hero />
-      <Features />
       <Stats />
       <TechnologyPreview />
       <Process />
