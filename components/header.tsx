@@ -6,7 +6,6 @@ import { ArrowUpRight, Menu, Phone, X } from "lucide-react"
 import { useEffect, useState, useRef } from "react"
 
 import { Button } from "@/components/ui/button"
-import Image from "next/image"
 
 const navItems = [
   { href: "/", label: "Home" },
@@ -82,20 +81,12 @@ export function Header() {
         }`}
       >
         <div className="container mx-auto px-4">
-           <div className="flex h-24 items-center justify-between gap-4 py-2">
-             <Link href="/" className="group flex items-center gap-4" aria-label="Ocean Armour Home">
-                <Image
-                  src={"/images/ocean-armour-logo.webp"}
-                  alt="Ocean Armour Logo"
-                  width={100}
-                  height={100}
-                  className="w-20 h-20 md:w-22 md:h-24 lg:w-28 lg:h-24 object-contain"
-                />
-
-               <span className="block text-2xl md:text-3xl lg:text-4xl font-bold font-[family-name:var(--font-display)] text-white">
-                  Ocean Armour
-                </span>
-            </Link>
+           <div className="flex h-16 items-center justify-between gap-4 py-2">
+              <Link href="/" className="group" aria-label="Ocean Armour Home">
+                <span className="block text-2xl md:text-3xl lg:text-4xl font-bold font-[family-name:var(--font-display)] text-white">
+                   Ocean Armour
+                 </span>
+             </Link>
 
              <nav className="relative z-50 hidden items-center gap-1 rounded-full px-2 py-2 lg:flex border border-white/10 bg-white/5">
               {navItems.map((item) => {

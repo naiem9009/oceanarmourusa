@@ -29,7 +29,7 @@ const highlights = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] overflow-hidden pt-32 text-white">
+    <section className="relative min-h-[90vh] overflow-hidden pt-8 sm:pt-12 lg:pt-16 text-white">
       <div className="absolute inset-0">
         <Image
           src={heroImage}
@@ -49,6 +49,17 @@ export function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
         <div className="max-w-3xl space-y-8">
+          {/* Logo Above Heading */}
+          <div className="flex items-center">
+            <Image
+              src="/images/ocean-armour-logo.webp"
+              alt="Ocean Armour Logo"
+              width={120}
+              height={120}
+              className="w-28 h-28 sm:w-36 sm:h-36 lg:w-48 lg:h-48 object-contain"
+            />
+          </div>
+
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-display font-semibold leading-[1.05]">
               Advanced Marine Protection.
