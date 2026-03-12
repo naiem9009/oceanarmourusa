@@ -1,8 +1,6 @@
 "use client"
 
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
 
 export function AquaphobixSection() {
   return (
@@ -75,13 +73,6 @@ export function AquaphobixSection() {
               <p className="text-sm text-white/60">5-year warranty protection</p>
             </div>
           </div>
-
-          {/* CTA Button */}
-          <Button asChild className="rounded-full bg-[#00B4D8] px-8 py-3 text-white font-semibold hover:bg-[#0095b8] transition-colors">
-            <Link href="/technology">
-              Learn More About Aquaphobix
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
