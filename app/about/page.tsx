@@ -8,8 +8,8 @@ import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'About Ocean Armour USA | Marine Coating Experts',
-  description: 'Learn about Ocean Armour USA, the licensed Aquaphobix dealer and certified applicator serving Broward and Palm Beach Counties.',
+  title: 'About Ocean Armour | Marine Coating Experts',
+  description: 'Learn about Ocean Armour, the licensed Aquaphobix dealer and certified team serving Broward and Palm Beach Counties.',
 }
 
 export default function AboutPage() {

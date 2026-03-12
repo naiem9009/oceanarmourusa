@@ -45,7 +45,7 @@ const faqs = [
   {
     question: 'What service areas do you cover?',
     answer:
-      'Ocean Armour USA is an Aquaphobix licensed dealer for Broward and Palm Beach counties.',
+      'Ocean Armour is an Aquaphobix licensed dealer for Broward and Palm Beach counties.',
   },
 ]
 
@@ -78,23 +78,23 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
               <p className="text-lg text-white/70">
                 Clear, technical, and practical guidance on Aquaphobix performance, application, and care.
               </p>
-              <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">Performance</span>
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">Application</span>
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">Maintenance</span>
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">Warranty</span>
+              <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
+                <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Performance</span>
+                <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Application</span>
+                <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Maintenance</span>
+                <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Warranty</span>
               </div>
               {showCta && (
                 <Button
                   asChild
                   className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6"
                 >
-                  <Link href="/contact">Talk With an Applicator</Link>
+                  <Link href="/contact">Talk to a Team Member</Link>
                 </Button>
               )}
             </div>
 
-            <div className="rounded-[36px] border border-white/10 bg-white/5 p-[1px] shadow-[0_30px_70px_rgba(0,0,0,0.4)]">
+            <div className="rounded-[36px] border border-[#6ed0ff]/30 bg-[#6ed0ff]/8 p-[1px] shadow-[0_30px_70px_rgba(110,208,255,0.18)]">
               <div className="rounded-[34px] bg-[#001826]/85 p-6 md:p-8">
                 <Accordion type="single" collapsible className="w-full">
                   {visibleFaqs.map((faq, index) => (
@@ -115,7 +115,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
             </div>
           </div>
         ) : (
-          <div className="rounded-[36px] border border-white/10 bg-white/5 p-[1px] shadow-[0_30px_70px_rgba(0,0,0,0.4)]">
+          <div className="rounded-[36px] border border-[#6ed0ff]/30 bg-[#6ed0ff]/8 p-[1px] shadow-[0_30px_70px_rgba(110,208,255,0.18)]">
             <div className="rounded-[34px] bg-[#001826]/85 p-6 md:p-8">
               <Accordion type="single" collapsible className="w-full">
                 {visibleFaqs.map((faq, index) => (
@@ -137,10 +137,10 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
         )}
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-6 md:p-7 text-white">
+          <div className="rounded-3xl border border-[#2ECC71]/30 bg-[#2ECC71]/10 p-6 md:p-7 text-white">
             <div className="flex items-center justify-between">
               <h3 className="text-xl font-semibold">Need a deeper dive?</h3>
-              <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/60">
+              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/80">
                 Support
               </span>
             </div>
@@ -157,7 +157,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
             )}
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
+          <div className="rounded-3xl border border-[#00B4D8]/30 bg-[#00B4D8]/8 p-[1px] shadow-[0_20px_50px_rgba(0,180,216,0.2)]">
             <div className="rounded-3xl bg-[#001826]/80 p-6 md:p-7">
               <div className="flex items-center justify-between">
                 <h4 className="text-lg font-semibold text-white">Aquaphobix Overview Video</h4>
@@ -171,6 +171,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
                       className="h-full w-full"
                       src={videoUrl}
                       title="Aquaphobix overview video"
+                      loading="lazy"
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                     />

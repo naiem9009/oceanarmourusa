@@ -50,6 +50,33 @@ const services = [
   },
 ]
 
+const serviceCardStyles = [
+  {
+    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.2),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#00B4D8]/25 text-[#9feeff]',
+    check: 'text-[#8de8ff]',
+  },
+  {
+    outer: 'border-[#2ECC71]/35 bg-[#2ECC71]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(46,204,113,0.2),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#2ECC71]/25 text-[#9dffc4]',
+    check: 'text-[#9dffc4]',
+  },
+  {
+    outer: 'border-[#6ed0ff]/35 bg-[#6ed0ff]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(110,208,255,0.2),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#6ed0ff]/25 text-[#b8ebff]',
+    check: 'text-[#b8ebff]',
+  },
+  {
+    outer: 'border-[#00B4D8]/30 bg-[#00B4D8]/8',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.16),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#00B4D8]/20 text-[#9feeff]',
+    check: 'text-[#9feeff]',
+  },
+]
+
 export function ServicesOfferings() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
@@ -62,23 +89,24 @@ export function ServicesOfferings() {
             Shipyard-grade services for every vessel.
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto">
-            From surface prep to certified application and maintenance planning, Ocean Armour USA delivers complete
+            From surface prep to certified application and maintenance planning, Ocean Armour delivers complete
             Aquaphobix service coverage.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {services.map((service) => {
+          {services.map((service, index) => {
             const Icon = service.icon
+            const style = serviceCardStyles[(index + 2) % serviceCardStyles.length]
             return (
               <div
                 key={service.title}
-                className="rounded-2xl border border-white/10 bg-white/5 p-[1px] shadow-[0_22px_55px_rgba(0,0,0,0.35)]"
+                className={`rounded-2xl border p-[1px] shadow-[0_22px_55px_rgba(0,0,0,0.35)] ${style.outer}`}
               >
-                <div className="h-full rounded-2xl bg-[#001826]/80 p-6 md:p-7">
+                <div className={`h-full rounded-2xl p-6 md:p-7 ${style.inner}`}>
                   <div className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                      <Icon className="h-6 w-6 text-[#6ed0ff]" />
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${style.icon}`}>
+                      <Icon className="h-6 w-6" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-white">{service.title}</h3>
@@ -88,7 +116,7 @@ export function ServicesOfferings() {
                   <ul className="mt-5 space-y-3 text-sm text-white/70">
                     {service.features.map((feature) => (
                       <li key={feature} className="flex items-start gap-3">
-                        <CheckCircle2 className="mt-0.5 h-4 w-4 text-[#6ed0ff]" />
+                        <CheckCircle2 className={`mt-0.5 h-4 w-4 ${style.check}`} />
                         <span>{feature}</span>
                       </li>
                     ))}

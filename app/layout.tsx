@@ -16,7 +16,7 @@ const cormorant = Cormorant_Garamond({
 })
 
 export const metadata: Metadata = {
-  title: 'Ocean Armour USA | Aquaphobix Licensed Dealer',
+  title: 'Ocean Armour | Aquaphobix Licensed Dealer',
   description:
     'Advanced marine thermoplastic powder coating for Broward and Palm Beach counties. UV stable, 100% solids, and engineered for corrosion resistance.',
   themeColor: '#003B73',

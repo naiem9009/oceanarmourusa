@@ -1,5 +1,6 @@
 import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
+import { AquaphobixSection } from '@/components/aquaphobix-section'
 import { Features } from '@/components/features'
 import { Process } from '@/components/process'
 import { Stats } from '@/components/stats'
@@ -13,11 +14,12 @@ export default function Page() {
     <>
       <Header />
       <Hero />
+      <AquaphobixSection />
       <Features />
       <Stats />
       <TechnologyPreview />
       <Process />
-      <Faqs limit={4} showCta />
+      <Faqs limit={4} />
       <CTA />
       <Footer />
     </>

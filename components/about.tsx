@@ -24,10 +24,10 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-              Why Choose <span className="text-primary">Ocean Armour USA</span>
+              Why Choose <span className="text-primary">Ocean Armour</span>
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              Ocean Armour USA is the licensed Aquaphobix dealer delivering shipyard-grade marine protection with a focus on long-term performance and clean waterways.
+              Ocean Armour is the licensed Aquaphobix dealer delivering shipyard-grade marine protection with a focus on long-term performance and clean waterways.
             </p>
             <div className="space-y-3">
               {features.map((feature, idx) => (

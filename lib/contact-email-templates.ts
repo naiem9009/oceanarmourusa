@@ -53,7 +53,7 @@ export function buildAdminNotificationEmail(data: ContactPayload) {
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:700px;margin:0 auto;">
       <tr>
         <td style="padding:0 0 16px;text-align:center;">
-          <img src="http://oceanarmourusa.com/images/ocean-armour-logo.png" alt="Ocean Armour USA" width="68" height="68" style="display:inline-block;width:68px;height:68px;object-fit:contain;" />
+          <img src="http://oceanarmour.com/images/ocean-armour-logo.png" alt="Ocean Armour" width="68" height="68" style="display:inline-block;width:68px;height:68px;object-fit:contain;" />
         </td>
       </tr>
     </table>
@@ -61,7 +61,7 @@ export function buildAdminNotificationEmail(data: ContactPayload) {
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:700px;margin:0 auto;background:${BRAND_COLOR};border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 24px 18px;">
-          <p style="margin:0;color:#d5ebf7;font-size:11px;letter-spacing:2px;text-transform:uppercase;">Ocean Armour USA</p>
+          <p style="margin:0;color:#d5ebf7;font-size:11px;letter-spacing:2px;text-transform:uppercase;">Ocean Armour</p>
           <h1 style="margin:4px 0 0;color:#ffffff;font-size:26px;line-height:1.25;font-weight:700;">New Contact Request</h1>
           <p style="margin:8px 0 0;color:#d5ebf7;font-size:13px;">Submitted on ${submittedAt} ET</p>
         </td>
@@ -90,7 +90,7 @@ export function buildAdminNotificationEmail(data: ContactPayload) {
   </div>`
 
   const text = [
-    'New Contact Request - Ocean Armour USA',
+    'New Contact Request - Ocean Armour',
     `Name: ${name}`,
     `Email: ${data.email}`,
     `Phone: ${data.phone || 'Not provided'}`,
@@ -122,7 +122,7 @@ export function buildVisitorConfirmationEmail(data: ContactPayload) {
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:700px;margin:0 auto;">
       <tr>
         <td style="padding:0 0 16px;text-align:center;">
-          <img src="http://oceanarmourusa.com/images/ocean-armour-logo.png" alt="Ocean Armour USA" width="68" height="68" style="display:inline-block;width:68px;height:68px;object-fit:contain;" />
+          <img src="http://oceanarmour.com/images/ocean-armour-logo.png" alt="Ocean Armour" width="68" height="68" style="display:inline-block;width:68px;height:68px;object-fit:contain;" />
         </td>
       </tr>
     </table>
@@ -130,7 +130,7 @@ export function buildVisitorConfirmationEmail(data: ContactPayload) {
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:700px;margin:0 auto;background:${BRAND_COLOR};border-radius:16px;overflow:hidden;">
       <tr>
         <td style="padding:24px 24px 18px;">
-          <p style="margin:0;color:#d5ebf7;font-size:11px;letter-spacing:2px;text-transform:uppercase;">Ocean Armour USA</p>
+          <p style="margin:0;color:#d5ebf7;font-size:11px;letter-spacing:2px;text-transform:uppercase;">Ocean Armour</p>
           <h1 style="margin:4px 0 0;font-size:26px;line-height:1.25;color:#ffffff;">Thanks for reaching out, ${safeFirstName}.</h1>
           <p style="margin:8px 0 0;color:#d5ebf7;font-size:14px;">We received your consultation request and our team will follow up shortly.</p>
         </td>
@@ -149,7 +149,7 @@ export function buildVisitorConfirmationEmail(data: ContactPayload) {
               </p>
             </div>
 
-            <p style="margin:16px 0 0;color:#4f6d80;line-height:1.6;">If you need immediate help, call us at <a href="tel:+15615690936" style="color:${BRAND_COLOR};text-decoration:none;">561-569-0936</a> or email us at <a href="mailto:oceanarmourusa@gmail.com" style="color:${BRAND_COLOR};text-decoration:none;">oceanarmourusa@gmail.com</a>.</p>
+            <p style="margin:16px 0 0;color:#4f6d80;line-height:1.6;">If you need immediate help, call us at <a href="tel:+15615690936" style="color:${BRAND_COLOR};text-decoration:none;">561-569-0936</a> or email us at <a href="mailto:oceanarmour@gmail.com" style="color:${BRAND_COLOR};text-decoration:none;">oceanarmour@gmail.com</a>.</p>
           </div>
         </td>
       </tr>
@@ -164,11 +164,11 @@ export function buildVisitorConfirmationEmail(data: ContactPayload) {
     `Preferred contact: ${formatContactMethod(data.contactMethod)}`,
     `Boat type: ${data.boatType || 'Not provided'}`,
     '',
-    'Need immediate help? Call 561-569-0936 or email oceanarmourusa@gmail.com.',
+    'Need immediate help? Call 561-569-0936 or email oceanarmour@gmail.com.',
   ].join('\n')
 
   return {
-    subject: 'We received your consultation request | Ocean Armour USA',
+    subject: 'We received your consultation request | Ocean Armour',
     html,
     text,
   }

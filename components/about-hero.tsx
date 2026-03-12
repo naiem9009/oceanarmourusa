@@ -13,21 +13,21 @@ export function AboutHero() {
               About
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold leading-tight">
-              About Ocean Armour USA
+              About Ocean Armour
             </h1>
             <p className="text-lg text-white/75 max-w-2xl">
-              Ocean Armour USA is the licensed Aquaphobix dealer and certified applicator serving Broward and Palm Beach
+              Ocean Armour is the licensed Aquaphobix dealer and certified team serving Broward and Palm Beach
               Counties, delivering shipyard-grade applications for vessels of every size.
             </p>
-            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/60">
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Licensed Dealer</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Certified Crew</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Shipyard Prep</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Clean Tech</span>
+            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/80">
+              <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Licensed Dealer</span>
+              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Certified Crew</span>
+              <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Shipyard Prep</span>
+              <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Clean Tech</span>
             </div>
           </div>
 
-          <div className="rounded-[32px] border border-white/10 bg-white/5 p-[1px] shadow-[0_30px_70px_rgba(0,0,0,0.45)]">
+          <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">
             <div className="rounded-[30px] bg-[#001826]/85 p-6 md:p-8">
               <h2 className="text-xl font-semibold">Quick Facts</h2>
               <div className="mt-5 space-y-4 text-sm text-white/70">

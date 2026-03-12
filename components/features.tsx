@@ -1,5 +1,3 @@
-'use client'
-
 import { SectionBackground } from '@/components/section-background'
 import { Anchor, Gauge, Leaf, ShieldCheck, Sun, Timer } from 'lucide-react'
 
@@ -42,6 +40,24 @@ const features = [
   },
 ]
 
+const featureCardStyles = [
+  {
+    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.2),rgba(0,24,38,0.84))] group-hover:bg-[linear-gradient(160deg,rgba(0,180,216,0.3),rgba(0,28,44,0.92))]',
+    icon: 'bg-[#00B4D8]/25 text-[#9feeff]',
+  },
+  {
+    outer: 'border-[#2ECC71]/35 bg-[#2ECC71]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(46,204,113,0.2),rgba(0,24,38,0.84))] group-hover:bg-[linear-gradient(160deg,rgba(46,204,113,0.3),rgba(0,28,44,0.92))]',
+    icon: 'bg-[#2ECC71]/25 text-[#9dffc4]',
+  },
+  {
+    outer: 'border-[#6ed0ff]/35 bg-[#6ed0ff]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(110,208,255,0.2),rgba(0,24,38,0.84))] group-hover:bg-[linear-gradient(160deg,rgba(110,208,255,0.3),rgba(0,28,44,0.92))]',
+    icon: 'bg-[#6ed0ff]/25 text-[#b8ebff]',
+  },
+]
+
 export function Features() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
@@ -55,30 +71,31 @@ export function Features() {
               A smarter marine coating system for performance and protection.
             </h2>
             <p className="text-lg text-white/70 max-w-2xl">
-              Ocean Armour USA delivers licensed Aquaphobix application with proven hydrodynamics,
+              Ocean Armour delivers licensed Aquaphobix application with proven hydrodynamics,
               long-term durability, and environmentally clean protection.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">5-Year Warranty</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Zero Biocides</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">850 PSI Bond</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Power-Washable</span>
+          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
+            <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">5-Year Warranty</span>
+            <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Zero Biocides</span>
+            <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">850 PSI Bond</span>
+            <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Power-Washable</span>
           </div>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {features.map((feature) => {
+          {features.map((feature, index) => {
             const Icon = feature.icon
+            const style = featureCardStyles[index % featureCardStyles.length]
             return (
               <div
                 key={feature.title}
-                className="group rounded-2xl border border-white/10 bg-white/5 p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+                className={`group rounded-2xl border p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] ${style.outer}`}
               >
-                <div className="h-full rounded-2xl bg-[#001826]/80 p-6 transition duration-300 group-hover:bg-[#001c2c]">
+                <div className={`h-full rounded-2xl p-6 transition duration-300 ${style.inner}`}>
                   <div className="flex items-center justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                      <Icon className="h-6 w-6 text-[#6ed0ff]" />
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${style.icon}`}>
+                      <Icon className="h-6 w-6" />
                     </div>
                     <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">
                       {feature.metric}

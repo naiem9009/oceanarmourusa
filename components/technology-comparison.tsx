@@ -90,17 +90,17 @@ export function TechnologyComparison() {
               Key attributes and performance properties from the technical data sheet.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Material</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Performance</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Testing</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Applications</span>
+          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
+            <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Material</span>
+            <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Performance</span>
+            <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Testing</span>
+            <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Applications</span>
           </div>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-          <div className="rounded-[32px] border border-white/10 p-[1px] shadow-[0_22px_55px_rgba(0,0,0,0.35)]">
-            <div className="rounded-[30px] p-6 md:p-7 text-white">
+          <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/8 p-[1px] shadow-[0_22px_55px_rgba(0,180,216,0.2)]">
+            <div className="rounded-[30px] bg-[linear-gradient(160deg,rgba(0,180,216,0.16),rgba(0,24,38,0.86))] p-6 md:p-7 text-white">
               <h3 className="text-xl font-semibold text-white">Key Attributes</h3>
               <div className="mt-6 space-y-6">
                 {attributes.map((section) => (
@@ -120,8 +120,8 @@ export function TechnologyComparison() {
             </div>
           </div>
 
-          <div className="rounded-[32px] border border-[#6ed0ff]/25 p-[1px] shadow-[0_22px_55px_rgba(0,180,216,0.18)]">
-            <div className="rounded-[30px] p-6 md:p-7 text-white">
+          <div className="rounded-[32px] border border-[#2ECC71]/30 bg-[#2ECC71]/8 p-[1px] shadow-[0_22px_55px_rgba(46,204,113,0.18)]">
+            <div className="rounded-[30px] bg-[linear-gradient(160deg,rgba(46,204,113,0.14),rgba(0,24,38,0.86))] p-6 md:p-7 text-white">
               <h3 className="text-xl font-semibold text-white">Performance Properties</h3>
               <div className="mt-6 space-y-6">
                 {performance.map((section) => (

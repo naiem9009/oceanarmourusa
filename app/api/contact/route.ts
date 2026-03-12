@@ -51,8 +51,8 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Email service is not configured.' }, { status: 500 })
     }
 
-    const adminEmail = process.env.CONTACT_ADMIN_EMAIL || 'oceanarmourusa@gmail.com'
-    const fromName = process.env.CONTACT_FROM_NAME || 'Ocean Armour USA'
+    const adminEmail = process.env.CONTACT_ADMIN_EMAIL || 'oceanarmour@gmail.com'
+    const fromName = process.env.CONTACT_FROM_NAME || 'Ocean Armour'
 
     const transporter = nodemailer.createTransport({
       host: smtp.host,

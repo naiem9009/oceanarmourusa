@@ -36,6 +36,24 @@ const pillars = [
   },
 ]
 
+const pillarCardStyles = [
+  {
+    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.2),rgba(0,24,38,0.84))] hover:bg-[linear-gradient(160deg,rgba(0,180,216,0.3),rgba(0,28,44,0.9))]',
+    icon: 'bg-[#00B4D8]/25 text-[#9feeff]',
+  },
+  {
+    outer: 'border-[#2ECC71]/35 bg-[#2ECC71]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(46,204,113,0.2),rgba(0,24,38,0.84))] hover:bg-[linear-gradient(160deg,rgba(46,204,113,0.3),rgba(0,28,44,0.9))]',
+    icon: 'bg-[#2ECC71]/25 text-[#9dffc4]',
+  },
+  {
+    outer: 'border-[#6ed0ff]/35 bg-[#6ed0ff]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(110,208,255,0.2),rgba(0,24,38,0.84))] hover:bg-[linear-gradient(160deg,rgba(110,208,255,0.3),rgba(0,28,44,0.9))]',
+    icon: 'bg-[#6ed0ff]/25 text-[#b8ebff]',
+  },
+]
+
 export function TechnologyPreview() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
@@ -52,15 +70,18 @@ export function TechnologyPreview() {
               Aquaphobix technology engineered for clean, long-term marine protection.
             </h2>
             <p className="text-lg text-white/70">
-              Applied by Ocean Armour USA in professional shipyard environments, the system delivers hydrodynamic efficiency,
+              Applied by Ocean Armour in professional shipyard environments, the system delivers hydrodynamic efficiency,
               durable adhesion, and environmental compliance for vessels of every size.
             </p>
-            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/60">
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Zero Biocides</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">850 PSI Bond</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">3000-Hour UV</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">5-Year Warranty</span>
+
+            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/80">
+              <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">3000 Hour UV Tested</span>
+              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">100% Solids</span>
+              <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Zero VOCs</span>
+              <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Zero Toxic Biocides</span>
+              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center col-span-2">Power-Washable</span>
             </div>
+
             <Button
               asChild
               className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-12 px-7"
@@ -70,17 +91,18 @@ export function TechnologyPreview() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {pillars.map((pillar) => {
+            {pillars.map((pillar, index) => {
               const Icon = pillar.icon
+              const style = pillarCardStyles[(index + 1) % pillarCardStyles.length]
               return (
                 <div
                   key={pillar.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-[1px] shadow-[0_18px_45px_rgba(0,0,0,0.35)]"
+                  className={`rounded-2xl border p-[1px] shadow-[0_18px_45px_rgba(0,0,0,0.35)] ${style.outer}`}
                 >
-                  <div className="h-full rounded-2xl bg-[#001826]/80 p-5 transition duration-300 hover:bg-[#001c2c]">
+                  <div className={`h-full rounded-2xl p-5 transition duration-300 ${style.inner}`}>
                     <div className="flex items-center gap-3">
-                      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-                        <Icon className="h-5 w-5 text-[#6ed0ff]" />
+                      <span className={`flex h-10 w-10 items-center justify-center rounded-xl ${style.icon}`}>
+                        <Icon className="h-5 w-5" />
                       </span>
                       <h3 className="text-base font-semibold text-white">{pillar.title}</h3>
                     </div>

@@ -20,21 +20,21 @@ export function FaqsHero() {
             <p className="text-lg text-white/70 max-w-2xl">
               Everything you need to know about Aquaphobix performance, shipyard application, and long-term maintenance.
             </p>
-            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/60">
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Performance</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Application</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Service Area</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Warranty</span>
+            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/80">
+              <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Performance</span>
+              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Application</span>
+              <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Service Area</span>
+              <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Warranty</span>
             </div>
             <Button
               asChild
               className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6"
             >
-              <Link href="/contact">Talk With an Applicator</Link>
+              <Link href="/contact">Talk to a Team Member</Link>
             </Button>
           </div>
 
-          <div className="rounded-[32px] border border-white/10 bg-white/5 p-[1px] shadow-[0_30px_70px_rgba(0,0,0,0.45)]">
+          <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">
             <div className="rounded-[30px] bg-[#001826]/85 p-6 md:p-8">
               <h2 className="text-xl font-semibold">Quick Facts</h2>
               <div className="mt-5 space-y-4 text-sm text-white/70">

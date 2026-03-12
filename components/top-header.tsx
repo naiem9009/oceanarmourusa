@@ -11,7 +11,7 @@ interface TopHeaderProps {
 const TopHeader = ({ isScrolled }: TopHeaderProps) => {
   return (
     <motion.div
-      className={`bg-[#003B73] backdrop-blur-sm text-white py-3 px-4 text-[13px] relative z-50 transition-all duration-500 border-b border-[#C0C0C0]/30 ${
+      className={`bg-[#003B73] md:backdrop-blur-sm text-white py-3 px-4 text-[13px] relative z-50 transition-all duration-500 border-b border-[#C0C0C0]/30 ${
         isScrolled ? "transform -translate-y-full opacity-0" : "transform translate-y-0 opacity-100"
       }`}
       initial={{ y: -50, opacity: 0 }}
@@ -30,16 +30,16 @@ const TopHeader = ({ isScrolled }: TopHeaderProps) => {
             <span className="font-medium">561-569-0936</span>
           </motion.a>
           <motion.a
-            href="mailto:oceanarmourusa@gmail.com"
+            href="mailto:oceanarmour@gmail.com"
             id="email_contact_cp"
             className="flex items-center gap-2 hover:text-[#2ECC71] transition-colors group"
             whileHover={{ scale: 1.02 }}
           >
             <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" />
-            <span className="font-medium">oceanarmourusa</span>
+            <span className="font-medium">Ocean Armour</span>
           </motion.a>
           <motion.a
-            href="https://www.instagram.com/oceanarmourusa?igsh=MWUzcnZsb3Jldm10&utm_source=qr"
+            href="https://www.instagram.com/oceanarmour"
             className="flex items-center gap-2 hover:text-[#2ECC71] transition-colors group"
             whileHover={{ scale: 1.02 }}
           >

@@ -1,5 +1,3 @@
-'use client'
-
 import { Star } from 'lucide-react'
 
 const testimonials = [
@@ -7,7 +5,7 @@ const testimonials = [
     name: 'Captain James Mitchell',
     role: 'Fleet Manager',
     company: 'Global Shipping Co.',
-    content: 'Ocean Armour USA delivered a durable, corrosion-resistant finish that is holding up in harsh conditions.',
+    content: 'Ocean Armour delivered a durable, corrosion-resistant finish that is holding up in harsh conditions.',
     rating: 5,
   },
   {
@@ -21,7 +19,7 @@ const testimonials = [
     name: 'David Chen',
     role: 'Operations Director',
     company: 'Port Authority',
-    content: 'Reliable, efficient, and clear on technical requirements. Ocean Armour USA is our go-to partner.',
+    content: 'Reliable, efficient, and clear on technical requirements. Ocean Armour is our go-to partner.',
     rating: 5,
   },
   {

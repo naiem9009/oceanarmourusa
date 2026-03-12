@@ -16,7 +16,7 @@ const termsSections = [
   {
     title: 'Website Use',
     points: [
-      'Content is provided for general informational purposes about Ocean Armour USA services.',
+      'Content is provided for general informational purposes about Ocean Armour services.',
       'You agree not to misuse the website, interfere with operations, or attempt unauthorized access.',
       'We may update, suspend, or discontinue website features at any time.',
     ],
@@ -32,7 +32,7 @@ const termsSections = [
   {
     title: 'Intellectual Property',
     points: [
-      'All website text, branding, graphics, and design elements are owned by Ocean Armour USA or licensed to us.',
+      'All website text, branding, graphics, and design elements are owned by Ocean Armour or licensed to us.',
       'You may not copy, reproduce, republish, or distribute materials without prior written permission.',
     ],
   },
@@ -46,19 +46,19 @@ const termsSections = [
   {
     title: 'Limitation of Liability',
     points: [
-      'To the maximum extent permitted by law, Ocean Armour USA is not liable for indirect, incidental, special, or consequential damages related to website use.',
+      'To the maximum extent permitted by law, Ocean Armour is not liable for indirect, incidental, special, or consequential damages related to website use.',
       'Nothing in these terms limits liability where limitation is prohibited by law.',
     ],
   },
   {
     title: 'Contact',
-    points: ['Questions about these Terms can be sent to oceanarmourusa@gmail.com or by phone at 561-569-0936.'],
+    points: ['Questions about these Terms can be sent to oceanarmour@gmail.com or by phone at 561-569-0936.'],
   },
 ]
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Ocean Armour USA',
-  description: 'Review terms governing use of the Ocean Armour USA website and service requests.',
+  title: 'Terms of Service | Ocean Armour',
+  description: 'Review terms governing use of the Ocean Armour website and service requests.',
 }
 
 export default function TermsOfServicePage() {
@@ -76,7 +76,7 @@ export default function TermsOfServicePage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold">Terms of Service</h1>
               <p className="text-sm text-white/65">Last updated: {updatedOn}</p>
               <p className="text-base md:text-lg text-white/75 max-w-3xl">
-                These Terms govern your use of the Ocean Armour USA website and provide baseline terms related to
+                These Terms govern your use of the Ocean Armour website and provide baseline terms related to
                 consultations and project inquiries.
               </p>
             </div>

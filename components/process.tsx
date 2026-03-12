@@ -1,5 +1,3 @@
-'use client'
-
 import { SectionBackground } from '@/components/section-background'
 import { Anchor, CheckCircle2, Droplet, ShieldCheck, Wrench } from 'lucide-react'
 
@@ -30,6 +28,27 @@ const steps = [
   },
 ]
 
+const stepCardStyles = [
+  {
+    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.2),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#00B4D8]/25 text-[#9feeff]',
+    check: 'text-[#8de8ff]',
+  },
+  {
+    outer: 'border-[#2ECC71]/35 bg-[#2ECC71]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(46,204,113,0.2),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#2ECC71]/25 text-[#9dffc4]',
+    check: 'text-[#9dffc4]',
+  },
+  {
+    outer: 'border-[#6ed0ff]/35 bg-[#6ed0ff]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(110,208,255,0.2),rgba(0,24,38,0.84))]',
+    icon: 'bg-[#6ed0ff]/25 text-[#b8ebff]',
+    check: 'text-[#b8ebff]',
+  },
+]
+
 export function Process() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
@@ -47,33 +66,34 @@ export function Process() {
               consistent year after year.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/60">
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Certified Crew</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Shipyard Prep</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Quality Control</span>
-            <span className="rounded-full border border-white/15 px-4 py-2 text-center">Care Plan</span>
+          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
+            <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Certified Crew</span>
+            <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Shipyard Prep</span>
+            <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Quality Control</span>
+            <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Care Plan</span>
           </div>
         </div>
 
         <div className="relative mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           <div className="pointer-events-none absolute left-6 top-6 hidden h-[calc(100%-3rem)] w-px bg-white/10 md:block" />
-          {steps.map((step) => {
+          {steps.map((step, index) => {
             const Icon = step.icon
+            const style = stepCardStyles[(index + 2) % stepCardStyles.length]
             return (
               <div
                 key={step.number}
-                className="relative rounded-2xl border border-white/10 bg-white/5 p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+                className={`relative rounded-2xl border p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] ${style.outer}`}
               >
-                <div className="h-full rounded-2xl bg-[#001826]/80 p-6">
+                <div className={`h-full rounded-2xl p-6 ${style.inner}`}>
                   <div className="flex items-start justify-between">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10">
-                      <Icon className="h-6 w-6 text-[#6ed0ff]" />
+                    <div className={`flex h-12 w-12 items-center justify-center rounded-2xl ${style.icon}`}>
+                      <Icon className="h-6 w-6" />
                     </div>
                     <span className="text-3xl font-semibold text-white/30">{step.number}</span>
                   </div>
                   <div className="mt-5 space-y-3">
                     <div className="flex items-center gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-[#6ed0ff]" />
+                      <CheckCircle2 className={`h-5 w-5 ${style.check}`} />
                       <h3 className="text-lg font-semibold text-white">{step.title}</h3>
                     </div>
                     <p className="text-sm text-white/70">{step.description}</p>

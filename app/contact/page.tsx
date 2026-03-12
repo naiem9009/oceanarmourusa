@@ -4,7 +4,7 @@ import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Ocean Armour USA',
+  title: 'Contact Us | Ocean Armour',
   description:
     'Request a free consultation for Aquaphobix marine coating services in Broward and Palm Beach counties.',
 }

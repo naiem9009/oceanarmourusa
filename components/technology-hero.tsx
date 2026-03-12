@@ -18,7 +18,7 @@ export function TechnologyHero() {
               Technology
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-semibold leading-tight">
-              Aquaphobix Technical Overview
+              About the Aquaphobix Product
             </h1>
             <p className="text-lg text-white/75">
               Thermoplastic powder coating engineered for marine environments with UV stability, strong adhesion, and
@@ -28,12 +28,6 @@ export function TechnologyHero() {
               100% solids, no VOCs, and designed for low-temperature application on aluminum, steel, fiberglass, and
               composite substrates.
             </p>
-            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/60">
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">100% Solids</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">UV Stable</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Low-Temp Apply</span>
-              <span className="rounded-full border border-white/15 px-4 py-2 text-center">Corrosion Guard</span>
-            </div>
             <div className="flex flex-col sm:flex-row gap-4 sm:items-center">
               <Button asChild className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-12 px-7">
                 <Link href="/contact">Request a Consultation</Link>
@@ -50,7 +44,7 @@ export function TechnologyHero() {
             </div>
           </div>
 
-          <div className="rounded-[32px] border border-white/10 bg-white/5 p-[1px] shadow-[0_30px_70px_rgba(0,0,0,0.45)]">
+          <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">
             <div className="rounded-[30px] bg-[#001826]/85 p-7 md:p-8">
               <div className="flex items-start justify-between">
                 <div>
@@ -59,14 +53,9 @@ export function TechnologyHero() {
                     Performance specifications, application requirements, and handling guidance.
                   </p>
                 </div>
-                <span className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/60">
+                <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/80">
                   PDF
                 </span>
-              </div>
-              <div className="mt-6 grid gap-3 text-xs uppercase tracking-[0.28em] text-white/60">
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">ASTM Tested</span>
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">Marine Grade</span>
-                <span className="rounded-full border border-white/15 px-4 py-2 text-center">Application Specs</span>
               </div>
               <div className="mt-6">
                 {dataSheetUrl ? (

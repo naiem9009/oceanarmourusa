@@ -6,7 +6,7 @@ import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'FAQs | Ocean Armour USA',
+  title: 'FAQs | Ocean Armour',
   description:
     'Get answers to common questions about Aquaphobix technical data, application requirements, and service areas.',
 }

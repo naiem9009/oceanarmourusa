@@ -1,5 +1,3 @@
-'use client'
-
 import { SectionBackground } from '@/components/section-background'
 import { Anchor, ShieldCheck, Sun, Timer } from 'lucide-react'
 
@@ -30,6 +28,29 @@ const stats = [
   },
 ]
 
+const statCardStyles = [
+  {
+    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/12',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.24),rgba(0,24,38,0.82))]',
+    icon: 'bg-[#00B4D8]/25 text-[#8de8ff]',
+  },
+  {
+    outer: 'border-[#2ECC71]/35 bg-[#2ECC71]/12',
+    inner: 'bg-[linear-gradient(160deg,rgba(46,204,113,0.24),rgba(0,24,38,0.82))]',
+    icon: 'bg-[#2ECC71]/25 text-[#9dffc4]',
+  },
+  {
+    outer: 'border-[#6ed0ff]/35 bg-[#6ed0ff]/12',
+    inner: 'bg-[linear-gradient(160deg,rgba(110,208,255,0.24),rgba(0,24,38,0.82))]',
+    icon: 'bg-[#6ed0ff]/25 text-[#b8ebff]',
+  },
+  {
+    outer: 'border-[#00B4D8]/35 bg-[#00B4D8]/10',
+    inner: 'bg-[linear-gradient(160deg,rgba(0,180,216,0.18),rgba(0,24,38,0.82))]',
+    icon: 'bg-[#00B4D8]/20 text-[#9feeff]',
+  },
+]
+
 export function Stats() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-20 lg:py-24">
@@ -43,7 +64,7 @@ export function Stats() {
               Proven protection engineered for marine environments.
             </h2>
             <p className="text-sm md:text-base text-white/70">
-              Key performance markers that define Aquaphobix technology when applied by Ocean Armour USA’s certified team.
+              Key performance markers that define Aquaphobix technology when applied by Ocean Armour’s certified team.
             </p>
           </div>
           <div className="text-xs uppercase tracking-[0.3em] text-white/55">
@@ -52,17 +73,18 @@ export function Stats() {
         </div>
 
         <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat) => {
+          {stats.map((stat, index) => {
             const Icon = stat.icon
+            const style = statCardStyles[(index + 1) % statCardStyles.length]
             return (
               <div
                 key={stat.label}
-                className="rounded-2xl border border-white/10 bg-white/5 p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)]"
+                className={`rounded-2xl border p-[1px] shadow-[0_20px_50px_rgba(0,0,0,0.35)] ${style.outer}`}
               >
-                <div className="h-full rounded-2xl bg-[#001826]/80 p-6">
+                <div className={`h-full rounded-2xl p-6 ${style.inner}`}>
                   <div className="flex items-center justify-between">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
-                      <Icon className="h-5 w-5 text-[#6ed0ff]" />
+                    <span className={`flex h-11 w-11 items-center justify-center rounded-2xl ${style.icon}`}>
+                      <Icon className="h-5 w-5" />
                     </span>
                     <span className="text-[10px] uppercase tracking-[0.3em] text-white/50">Metric</span>
                   </div>

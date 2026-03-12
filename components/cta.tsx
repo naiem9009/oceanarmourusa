@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { SectionBackground } from '@/components/section-background'
@@ -11,11 +9,11 @@ export function CTA() {
       <SectionBackground />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[32px] border border-white/10 bg-white/5 p-[1px] shadow-[0_40px_90px_rgba(0,0,0,0.45)]">
-          <div className="rounded-[30px] bg-[#001826]/85 p-8 md:p-12 text-white backdrop-blur">
+        <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_40px_90px_rgba(0,180,216,0.2)]">
+          <div className="rounded-[30px] bg-[#001826]/85 p-8 md:p-12 text-white md:backdrop-blur">
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
               <div className="space-y-6 text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.38em] text-white/70">
+                <div className="inline-flex items-center gap-2 rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-3 py-1 text-[10px] uppercase tracking-[0.38em] text-white/80">
                   <span className="h-2 w-2 rounded-full bg-[#6ed0ff]" />
                   Get Started
                 </div>
@@ -49,10 +47,10 @@ export function CTA() {
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="rounded-2xl border border-[#00B4D8]/35 bg-[#00B4D8]/12 p-5">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-                      <Phone className="h-5 w-5 text-[#6ed0ff]" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#00B4D8]/25">
+                      <Phone className="h-5 w-5 text-[#9feeff]" />
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-[0.3em] text-white/60">Call us</p>
@@ -60,26 +58,26 @@ export function CTA() {
                     </div>
                   </div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
+                <div className="rounded-2xl border border-[#2ECC71]/35 bg-[#2ECC71]/12 p-5">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl">
-                      <Mail className="h-5 w-5 text-[#6ed0ff]" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#2ECC71]/25">
+                      <Mail className="h-5 w-5 text-[#9dffc4]" />
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-[0.3em] text-white/60">Email us</p>
                       <a
-                        href="mailto:oceanarmourusa@gmail.com"
+                        href="mailto:oceanarmour@gmail.com"
                         className="font-semibold break-words transition hover:text-[#6ed0ff]"
                       >
-                        oceanarmourusa
+                        Ocean Armour
                       </a>
                     </div>
                   </div>
                 </div>
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-5 sm:col-span-2">
+                <div className="rounded-2xl border border-[#6ed0ff]/35 bg-[#6ed0ff]/12 p-5 sm:col-span-2">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10">
-                      <ArrowRight className="h-5 w-5 text-[#6ed0ff]" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#6ed0ff]/25">
+                      <ArrowRight className="h-5 w-5 text-[#b8ebff]" />
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-[0.3em] text-white/60">Service Area</p>

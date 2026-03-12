@@ -15,7 +15,7 @@ export function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-[32px] border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_40px_90px_rgba(0,0,0,0.45)] backdrop-blur">
+          <div className="rounded-[32px] border border-white/10 bg-white/5 p-6 md:p-8 shadow-[0_40px_90px_rgba(0,0,0,0.45)] md:backdrop-blur">
             <div className="flex items-start justify-between gap-6">
               <div className="max-w-xl space-y-4">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.38em] text-white/70">
@@ -59,8 +59,8 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="rounded-[32px] border border-white/10 bg-[#00121f]/70 p-6 md:p-8 backdrop-blur">
-            <Link href="/" className="group flex items-center gap-3" aria-label="Ocean Armour USA Home">
+          <div className="rounded-[32px] border border-white/10 bg-[#00121f]/70 p-6 md:p-8 md:backdrop-blur">
+            <Link href="/" className="group flex items-center gap-3" aria-label="Ocean Armour Home">
               <Image
                 src={"/images/ocean-armour-logo.png"}
                 alt="Ocean Armour Logo"
@@ -72,11 +72,11 @@ export function Footer() {
                 <span className="block text-[10px] uppercase tracking-[0.35em] text-white/60">
                   Aquaphobix Licensed Dealer
                 </span>
-                <span className="block text-lg font-semibold text-white">Ocean Armour USA</span>
+                <span className="block text-lg font-semibold text-white">Ocean Armour</span>
               </div>
             </Link>
             <p className="mt-4 text-sm text-white/70">
-              Certified Aquaphobix applicator delivering non-toxic, high-performance protection for vessels of every size.
+              Certified Aquaphobix team delivering non-toxic, high-performance protection for vessels of every size.
             </p>
             <div className="mt-6 flex flex-wrap gap-2 text-xs uppercase tracking-[0.26em] text-white/55">
               <span className="rounded-full border border-white/10 px-3 py-1">Zero Biocides</span>
@@ -85,13 +85,13 @@ export function Footer() {
             </div>
             <div className="mt-6 flex items-center gap-3">
               <a
-                href="https://www.instagram.com/oceanarmourusa"
+                href="https://www.instagram.com/oceanarmour"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-[#00B4D8] hover:bg-[#00B4D8]"
               >
                 <Instagram size={18} />
               </a>
               <a
-                href="mailto:oceanarmourusa@gmail.com"
+                href="mailto:oceanarmour@gmail.com"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white transition hover:border-[#00B4D8] hover:bg-[#00B4D8]"
               >
                 <Mail size={18} />
@@ -125,7 +125,7 @@ export function Footer() {
           <div>
             <h4 className="text-base font-semibold mb-4">Company</h4>
             <ul className="space-y-3 text-sm text-white/70">
-              <li>Ocean Armour USA</li>
+              <li>Ocean Armour</li>
               <li>Aquaphobix Licensed Dealer</li>
               <li>Zero Toxic Biocides</li>
               <li>5-Year Warranty</li>
@@ -143,8 +143,8 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="h-4 w-4 text-[#6ed0ff] flex-shrink-0 mt-0.5" />
-                <a href="mailto:oceanarmourusa@gmail.com" className="transition hover:text-[#6ed0ff]">
-                  oceanarmourusa
+                <a href="mailto:oceanarmour@gmail.com" className="transition hover:text-[#6ed0ff]">
+                  Ocean Armour
                 </a>
               </li>
               <li className="flex items-start gap-3">
@@ -157,7 +157,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/10 pt-6">
           <div className="flex flex-col gap-4 text-xs text-white/60 md:flex-row md:items-center md:justify-between">
-            <p>&copy; {currentYear} Ocean Armour USA. All rights reserved.</p>
+            <p>&copy; {currentYear} Ocean Armour. All rights reserved.</p>
             <div className="flex flex-wrap gap-4">
               <Link href="/privacy-policy" className="transition hover:text-[#6ed0ff]">
                 Privacy Policy

@@ -107,8 +107,8 @@ export function Contact() {
               <Mail className="w-6 h-6 text-[#6ed0ff] mt-1" />
               <div>
                 <p className="text-sm text-white/60">Email Us</p>
-                <a className="text-base font-semibold hover:text-[#6ed0ff]" href="mailto:oceanarmourusa@gmail.com">
-                  oceanarmourusa
+                <a className="text-base font-semibold hover:text-[#6ed0ff]" href="mailto:oceanarmour@gmail.com">
+                  Ocean Armour
                 </a>
               </div>
             </div>

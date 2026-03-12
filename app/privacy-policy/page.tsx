@@ -49,14 +49,14 @@ const policySections = [
   {
     title: 'Contact',
     points: [
-      'Questions about this policy can be sent to oceanarmourusa@gmail.com or by phone at 561-569-0936.',
+      'Questions about this policy can be sent to oceanarmour@gmail.com or by phone at 561-569-0936.',
     ],
   },
 ]
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Ocean Armour USA',
-  description: 'Learn how Ocean Armour USA collects, uses, and protects personal information.',
+  title: 'Privacy Policy | Ocean Armour',
+  description: 'Learn how Ocean Armour collects, uses, and protects personal information.',
 }
 
 export default function PrivacyPolicyPage() {
@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold">Privacy Policy</h1>
               <p className="text-sm text-white/65">Last updated: {updatedOn}</p>
               <p className="text-base md:text-lg text-white/75 max-w-3xl">
-                This Privacy Policy explains how Ocean Armour USA collects, uses, and protects information when you visit
+                This Privacy Policy explains how Ocean Armour collects, uses, and protects information when you visit
                 our website or request services.
               </p>
             </div>

@@ -14,7 +14,7 @@ export function AboutStory() {
               Built for performance, committed to clean waterways.
             </h2>
             <p className="text-lg text-white/75">
-              Ocean Armour USA is the licensed Aquaphobix dealer and certified applicator for Broward and Palm Beach
+              Ocean Armour is the licensed Aquaphobix dealer and certified team for Broward and Palm Beach
               Counties, delivering a high-performance alternative to traditional antifouling paints.
             </p>
             <p className="text-base text-white/65">
