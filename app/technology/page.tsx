@@ -3,7 +3,6 @@ import { TechnologyHero } from '@/components/technology-hero'
 import { AquaphobixSection } from '@/components/aquaphobix-section'
 import { TechnologyOverview } from '@/components/technology-overview'
 import { TechnologyComparison } from '@/components/technology-comparison'
-import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
@@ -21,7 +20,6 @@ export default function TechnologyPage() {
       <AquaphobixSection />
       <TechnologyOverview />
       <TechnologyComparison />
-      <CTA />
       <Footer />
     </>
   )

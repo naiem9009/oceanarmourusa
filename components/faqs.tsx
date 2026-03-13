@@ -81,14 +81,14 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
                 <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Maintenance</span>
                 <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Warranty</span>
               </div>
-              {showCta && (
-                <Button
-                  asChild
-                  className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6"
-                >
-                  <Link href="/contact">Talk to a Team Member</Link>
-                </Button>
-              )}
+               {showCta && (
+                 <Button
+                   asChild
+                   className="border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
+                 >
+                   <Link href="/contact">Talk to a Team Member</Link>
+                 </Button>
+               )}
             </div>
 
             <div className="rounded-[36px] border border-[#6ed0ff]/30 bg-[#6ed0ff]/8 p-[1px] shadow-[0_30px_70px_rgba(110,208,255,0.18)]">
@@ -142,7 +142,7 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
             {showCta && (
               <Button
                 asChild
-                className="mt-6 bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6"
+                className="mt-6 border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
               >
                 <Link href="/contact">Contact Our Team</Link>
               </Button>

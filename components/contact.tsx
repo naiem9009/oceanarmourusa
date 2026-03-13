@@ -285,7 +285,7 @@ export function Contact() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-12 px-8 disabled:opacity-60"
+                    className="border border-[#00B4D8] text-white font-semibold rounded-full h-12 px-8 bg-transparent hover:bg-[#00B4D8]/10 transition-colors disabled:opacity-60"
                   >
                     {isSubmitting ? 'Sending...' : 'Send Request'}
                   </Button>

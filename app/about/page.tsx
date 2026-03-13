@@ -3,7 +3,6 @@ import { AboutHero } from '@/components/about-hero'
 import { AboutStory } from '@/components/about-story'
 import { AboutTeam } from '@/components/about-team'
 import { AboutValues } from '@/components/about-values'
-import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
@@ -20,7 +19,6 @@ export default function AboutPage() {
       <AboutStory />
       <AboutValues />
       <AboutTeam />
-      <CTA />
       <Footer />
     </>
   )

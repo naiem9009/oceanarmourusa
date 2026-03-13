@@ -50,7 +50,7 @@ const TopHeader = ({ isScrolled }: TopHeaderProps) => {
         <div className="flex items-center gap-4">
           <Link
             href="/#cta"
-            className="rounded-full border border-transparent bg-[#00B4D8] px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white hover:bg-[#2ECC71] transition-colors"
+            className="rounded-full border border-[#00B4D8] bg-transparent px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-white hover:bg-[#00B4D8]/10 transition-colors"
           >
             Get a Quote
           </Link>

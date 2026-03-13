@@ -121,11 +121,11 @@ export function ServicesOfferings() {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-6">
-                    <Button asChild className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6">
-                      <Link href="/contact">Request a Consultation</Link>
-                    </Button>
-                  </div>
+                   <div className="mt-6">
+                     <Button asChild className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6">
+                       <Link href="/contact">Request a Consultation</Link>
+                     </Button>
+                   </div>
                 </div>
               </div>
             )

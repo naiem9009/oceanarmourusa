@@ -28,7 +28,7 @@ export function FaqsHero() {
             </div>
             <Button
               asChild
-              className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-11 px-6"
+              className="border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
             >
               <Link href="/contact">Talk to a Team Member</Link>
             </Button>

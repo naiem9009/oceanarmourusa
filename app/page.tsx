@@ -2,7 +2,6 @@ import { Header } from '@/components/header'
 import { Hero } from '@/components/hero'
 import { Process } from '@/components/process'
 import { Stats } from '@/components/stats'
-import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
 
 export default function Page() {
@@ -13,7 +12,6 @@ export default function Page() {
       <Stats />
       {/* <TechnologyPreview /> */}
       <Process />
-      <CTA />
       <Footer />
     </>
   )

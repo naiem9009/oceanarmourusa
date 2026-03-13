@@ -1,7 +1,6 @@
 import { Header } from '@/components/header'
 import { FaqsHero } from '@/components/faqs-hero'
 import { Faqs } from '@/components/faqs'
-import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
@@ -17,7 +16,6 @@ export default function FaqsPage() {
       <Header />
       <FaqsHero />
       <Faqs showHeader={false} />
-      <CTA />
       <Footer />
     </>
   )

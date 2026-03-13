@@ -121,7 +121,7 @@ export function Header() {
                   {phoneNumber}
                 </a>
               </Button>
-              <Button asChild className="rounded-full bg-[#00B4D8] px-6 text-white hover:bg-[#2ECC71]">
+              <Button asChild className="rounded-full border border-[#00B4D8] px-6 text-white bg-transparent hover:bg-[#00B4D8]/10 transition-colors">
                 <Link href="/contact">
                   Free Consultation
                   <ArrowUpRight className="h-5 w-5" />
@@ -189,7 +189,7 @@ export function Header() {
                 </span>
               </a>
             </Button>
-            <Button className="w-full rounded-full bg-[#00B4D8] py-4 text-white shadow-lg hover:bg-[#2ECC71]" asChild>
+            <Button className="w-full rounded-full border border-[#00B4D8] py-4 text-white bg-transparent hover:bg-[#00B4D8]/10 transition-colors" asChild>
               <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>
                 Free Consultation
               </Link>

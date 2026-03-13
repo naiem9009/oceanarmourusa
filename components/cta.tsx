@@ -5,9 +5,8 @@ import { ArrowRight, Mail, Phone } from 'lucide-react'
 
 export function CTA() {
   return (
-    <section id="cta" className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-24 lg:py-28">
+    <section id="cta" className="relative overflow-hidden bg-transparent py-24 lg:py-28">
       <SectionBackground />
-
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_40px_90px_rgba(0,180,216,0.2)]">
           <div className="rounded-[30px] bg-[#001826]/85 p-8 md:p-12 text-white md:backdrop-blur">
@@ -66,7 +65,7 @@ export function CTA() {
                     <div>
                       <p className="text-xs uppercase tracking-[0.3em] text-white/60">Email us</p>
                       <a
-                        href="mailto:oceanarmour@gmail.com"
+                        href="mailto:oceanarmourusa@gmail.com"
                         className="font-semibold break-words transition hover:text-[#6ed0ff]"
                       >
                         Ocean Armour

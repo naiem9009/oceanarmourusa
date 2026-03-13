@@ -84,7 +84,7 @@ export function TechnologyPreview() {
 
             <Button
               asChild
-              className="bg-[#00B4D8] hover:bg-[#2ECC71] text-white font-semibold rounded-full h-12 px-7"
+              className="border border-[#00B4D8] text-white font-semibold rounded-full h-12 px-7 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
             >
               <Link href="/technology">Explore the Technology</Link>
             </Button>

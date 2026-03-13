@@ -3,7 +3,6 @@ import { ServicesHero } from '@/components/services-hero'
 import { ServicesOfferings } from '@/components/services-offerings'
 import { ServicesComparison } from '@/components/services-comparison'
 import { Process } from '@/components/process'
-import { CTA } from '@/components/cta'
 import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
 
@@ -20,7 +19,6 @@ export default function ServicesPage() {
       <ServicesOfferings />
       <Process />
       <ServicesComparison />
-      <CTA />
       <Footer />
     </>
   )
