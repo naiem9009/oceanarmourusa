@@ -48,8 +48,6 @@ const faqs = [
   },
 ]
 
-const videoUrl = 'https://www.youtube.com/embed/uPlHbX7BlJY?si=Mnh0KuO0WCPd9Yuy'
-
 interface FaqsProps {
   limit?: number
   showCta?: boolean
@@ -135,15 +133,10 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
           </div>
         )}
 
-        <div className="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-12">
           <div className="rounded-3xl border border-[#2ECC71]/30 bg-[#2ECC71]/10 p-6 md:p-7 text-white">
-            <div className="flex items-center justify-between">
-              <h3 className="text-xl font-display font-semibold">Need a deeper dive?</h3>
-              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/80">
-                Support
-              </span>
-            </div>
-            <p className="mt-3 text-sm text-white/70">
+            <h3 className="text-xl font-display font-semibold">Need a deeper dive?</h3>
+            <p className="text-sm text-white/70">
               We can walk you through technical specs, prep requirements, and maintenance planning for your vessel.
             </p>
             {showCta && (
@@ -154,34 +147,6 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
                 <Link href="/contact">Contact Our Team</Link>
               </Button>
             )}
-          </div>
-
-          <div className="rounded-3xl border border-[#00B4D8]/30 bg-[#00B4D8]/8 p-[1px] shadow-[0_20px_50px_rgba(0,180,216,0.2)]">
-            <div className="rounded-3xl bg-[#001826]/80 p-6 md:p-7">
-              <div className="flex items-center justify-between">
-                <h4 className="text-lg font-display font-semibold text-white">Aquaphobix Overview Video</h4>
-              </div>
-              {videoUrl ? (
-                <div className="group relative mt-4 overflow-hidden rounded-2xl border border-white/10 bg-[#000f1d] shadow-[0_18px_45px_rgba(0,0,0,0.4)]">
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(110,208,255,0.22),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(0,180,216,0.18),transparent_50%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#00111f]/70" />
-                  <div className="relative aspect-video">
-                    <iframe
-                      className="h-full w-full"
-                      src={videoUrl}
-                      title="Aquaphobix overview video"
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                    />
-                  </div>
-                </div>
-              ) : (
-                <div className="mt-4 rounded-2xl border border-dashed border-white/20 bg-white/5 p-6 text-sm text-white/60">
-                  No video available.
-                </div>
-              )}
-            </div>
           </div>
         </div>
       </div>

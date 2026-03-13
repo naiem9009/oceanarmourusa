@@ -44,7 +44,7 @@ export function Process() {
               Consultation to completion
             </h2>
             <p className="text-lg text-white/70 max-w-2xl">
-              A streamlined, workflow that protects your vessel, minimizes downtime, and keeps performance
+              A streamlined workflow that protects your vessel, minimizes downtime, and keeps performance
               consistent year after year.
             </p>
           </div>
