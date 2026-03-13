@@ -30,7 +30,7 @@ const stats = [
     icon: Droplet,
     value: 'Works On',
     label: 'Aluminum, Steel',
-    detail: 'Fiberglass',
+    detail: 'Aluminum, Steel, Fiberglass',
     color: '#00B4D8',
     highlight: true,
   }
@@ -61,20 +61,20 @@ export function Stats() {
           </p>
         </div>
 
-        {/* Stats Grid - 6 Boxes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+        {/* Stats Grid - Boxed Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat) => {
             const Icon = stat.icon
             return (
               <div
                 key={stat.label}
-                className="flex flex-col gap-4 pb-8 border-b border-white/10 md:border-b-0 md:pb-0 last:border-b-0"
+                className="rounded-2xl border border-white/15 bg-white/8 p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(0,0,0,0.25)] hover:bg-white/12 transition-colors duration-300"
               >
                 {/* Icon */}
                 <div
-                  className="w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0"
+                  className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 mb-4"
                   style={{
-                    backgroundColor: `${stat.color}15`,
+                    backgroundColor: `${stat.color}20`,
                   }}
                 >
                   {stat.customIcon ? (
@@ -95,18 +95,13 @@ export function Stats() {
                 {/* Content */}
                 <div className="flex flex-col gap-2">
                   {/* Value - Large & Bold */}
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-white leading-tight">
+                  <div className="text-base font-semibold text-white" style={{ color: stat.color }}>
                     {stat.value}
-                  </div>
-
-                  {/* Label */}
-                  <div className="text-sm sm:text-base font-semibold text-white/80">
-                    {stat.label}
                   </div>
 
                   {/* Detail */}
                   {stat.detail && (
-                    <p className="text-sm sm:text-base font-semibold text-white/80 leading-relaxed mt-1">
+                    <p className="text-sm text-white/70 leading-relaxed mt-2">
                       {stat.detail}
                     </p>
                   )}
