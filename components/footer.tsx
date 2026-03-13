@@ -62,7 +62,7 @@ export function Footer() {
           <div className="rounded-[32px] border border-white/10 bg-[#00121f]/70 p-6 md:p-8 md:backdrop-blur">
             <Link href="/" className="group flex items-center gap-3" aria-label="Ocean Armour Home">
               <Image
-                src={"/images/ocean-armour-logo.png"}
+                src={"/images/ocean-armour-logo.webp"}
                 alt="Ocean Armour Logo"
                 width={88}
                 height={88}
