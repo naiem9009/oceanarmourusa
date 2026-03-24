@@ -59,7 +59,7 @@ export function Footer() {
                 </div>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2">
+              <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-1">
                 <div className="rounded-2xl border border-[#00B4D8]/35 bg-[#00B4D8]/12 p-5">
                   <div className="flex items-center gap-3">
                     <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#00B4D8]/25">
@@ -67,7 +67,7 @@ export function Footer() {
                     </div>
                     <div>
                       <p className="text-xs uppercase tracking-[0.3em] text-white/60">Call us</p>
-                      <p className="font-semibold break-words">561-569-0936</p>
+                      <p className="text-sm font-semibold break-words">561-569-0936</p>
                     </div>
                   </div>
                 </div>
@@ -80,7 +80,7 @@ export function Footer() {
                       <p className="text-xs uppercase tracking-[0.3em] text-white/60">Email us</p>
                       <a
                         href="mailto:oceanarmourusa@gmail.com"
-                        className="font-semibold break-words transition hover:text-[#6ed0ff]"
+                        className="text-sm font-semibold break-words transition hover:text-[#6ed0ff]"
                       >
                         Ocean Armour
                       </a>

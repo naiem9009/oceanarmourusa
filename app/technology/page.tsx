@@ -1,5 +1,4 @@
 import { Header } from '@/components/header'
-import { TechnologyHero } from '@/components/technology-hero'
 import { AquaphobixSection } from '@/components/aquaphobix-section'
 import { TechnologyOverview } from '@/components/technology-overview'
 import { TechnologyComparison } from '@/components/technology-comparison'
@@ -16,7 +15,6 @@ export default function TechnologyPage() {
   return (
     <>
       <Header />
-      <TechnologyHero />
       <AquaphobixSection />
       <TechnologyOverview />
       <TechnologyComparison />

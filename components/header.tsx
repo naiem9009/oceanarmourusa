@@ -82,13 +82,13 @@ export function Header() {
       >
         <div className="container mx-auto px-4">
            <div className="flex h-16 items-center justify-between gap-4 py-2">
-              <Link href="/" className="group" aria-label="Ocean Armour Home">
-                <span className="block text-2xl md:text-3xl lg:text-4xl font-bold font-[family-name:var(--font-display)] text-white">
+              <Link href="/" className="group flex-shrink-0" aria-label="Ocean Armour Home">
+                <span className="block text-xl sm:text-2xl md:text-2xl lg:text-3xl font-bold font-[family-name:var(--font-display)] text-white whitespace-nowrap">
                    Ocean Armour
                  </span>
-             </Link>
+              </Link>
 
-             <nav className="relative z-50 hidden items-center gap-1 rounded-full px-2 py-2 lg:flex border border-white/10 bg-white/5">
+              <nav className="relative z-50 hidden md:flex items-center gap-1 rounded-full px-2 py-2 lg:flex border border-white/10 bg-white/5">
               {navItems.map((item) => {
                 const isActive = pathname === item.href
 
@@ -96,7 +96,7 @@ export function Header() {
                   <div key={item.href}>
                     <Link
                       href={item.href}
-                      className={`group relative rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                      className={`group relative rounded-full px-3 lg:px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
                         isActive
                           ? "bg-white/15 text-white"
                           : "text-white/70 hover:text-white hover:bg-white/10"
@@ -110,36 +110,38 @@ export function Header() {
               })}
             </nav>
 
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden md:flex lg:flex items-center gap-2 lg:gap-3">
               <Button
                 asChild
                 variant="link"
-                className="rounded-full border-white/25 text-white hover:bg-white/10"
+                className="rounded-full border-white/25 text-white hover:bg-white/10 px-2 lg:px-4"
               >
                 <a id="phone_call_cp" href={phoneHref} className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  {phoneNumber}
+                  <span className="hidden md:inline lg:hidden text-sm">{phoneNumber.split('-').slice(1).join('-')}</span>
+                  <span className="hidden lg:inline">{phoneNumber}</span>
                 </a>
               </Button>
-              <Button asChild className="rounded-full border border-[#00B4D8] px-6 text-white bg-transparent hover:bg-[#00B4D8]/10 transition-colors">
+              <Button asChild className="rounded-full border border-[#00B4D8] px-3 lg:px-6 text-white bg-transparent hover:bg-[#00B4D8]/10 transition-colors">
                 <Link href="/contact">
-                  Free Consultation
+                  <span className="hidden md:block lg:hidden text-xs">Consultation</span>
+                  <span className="hidden lg:block">Free Consultation</span>
                   <ArrowUpRight className="h-5 w-5" />
                 </Link>
               </Button>
             </div>
 
              <Button
-               variant="ghost"
-               size="icon"
-               className="lg:hidden relative z-50 text-white/80 hover:text-[#2ECC71] hover:bg-white/10"
-               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-               aria-expanded={isMobileMenuOpen}
-               aria-controls="mobile-nav-panel"
-               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
+                variant="ghost"
+                size="icon"
+                className="md:hidden relative z-50 text-white/80 hover:text-[#2ECC71] hover:bg-white/10"
+                aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-nav-panel"
+                onClick={() => setIsMobileMenuOpen((prev) => !prev)}
+              >
+               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+             </Button>
           </div>
         </div>
         {(isScrolled || !isHomePage) && (
@@ -148,7 +150,7 @@ export function Header() {
       </header>
 
       <div
-        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-200 lg:hidden ${
+        className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-200 md:hidden ${
           isMobileMenuOpen ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -156,7 +158,7 @@ export function Header() {
 
         <aside
           id="mobile-nav-panel"
-          className={`fixed right-0 top-0 z-50 h-full w-80 max-w-[88vw] border-l border-[#00B4D8]/20 bg-gradient-to-b from-[#003B73]/95 via-[#001a2e]/95 to-[#000c18]/95 px-5 pb-6 pt-24 text-white transition-transform duration-200 ease-out lg:hidden backdrop-blur-sm ${
+          className={`fixed right-0 top-0 z-50 h-full w-80 max-w-[88vw] border-l border-[#00B4D8]/20 bg-gradient-to-b from-[#003B73]/95 via-[#001a2e]/95 to-[#000c18]/95 px-5 pb-6 pt-24 text-white transition-transform duration-200 ease-out md:hidden backdrop-blur-sm ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

@@ -1,4 +1,8 @@
 import { SectionBackground } from '@/components/section-background'
+import { Button } from './ui/button'
+
+const videoUrl = 'https://www.youtube.com/embed/uPlHbX7BlJY?si=Mnh0KuO0WCPd9Yuy'
+const dataSheetUrl = '/assets/022026-aquaphobix-tech-data-sheet.pdf'
 
 const attributes = [
   {
@@ -79,7 +83,7 @@ export function TechnologyComparison() {
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
       <SectionBackground />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
           <div className="space-y-5">
             <p className="text-xs uppercase tracking-[0.35em] text-white/60">Data</p>
@@ -90,11 +94,33 @@ export function TechnologyComparison() {
               Key attributes and performance properties from the technical data sheet.
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.3em] text-white/80">
-            <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Material</span>
-            <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Performance</span>
-            <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Testing</span>
-            <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Applications</span>
+          <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#2ECC71]/8 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">
+            <div className="rounded-[30px] bg-[#001826]/85 p-7 md:p-8">
+              <div className="flex items-start justify-between">
+                <div>
+                  <h2 className="text-xl font-semibold text-white">Technical Data Sheet</h2>
+                  <p className="mt-2 text-sm text-white/70">
+                    Performance specifications, application requirements, and handling guidance.
+                  </p>
+                </div>
+                <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-3 py-1 text-[10px] uppercase tracking-[0.3em] text-white/80">
+                  PDF
+                </span>
+              </div>
+              <div className="mt-6">
+                {dataSheetUrl ? (
+                  <Button asChild className="bg-[#2ECC71] hover:bg-[#2ECC71]/90 text-white font-semibold rounded-full h-11 px-6">
+                    <a href={dataSheetUrl} target="_blank" rel="noreferrer">
+                      Download PDF
+                    </a>
+                  </Button>
+                ) : (
+                  <div className="rounded-xl border border-dashed border-white/20 bg-white/5 p-4 text-sm text-white/60">
+                    Upload the technical data sheet PDF to enable downloads.
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -121,7 +147,7 @@ export function TechnologyComparison() {
           </div>
 
           <div className="rounded-[32px] border border-[#2ECC71]/30 bg-[#2ECC71]/8 p-[1px] shadow-[0_22px_55px_rgba(46,204,113,0.18)]">
-            <div className="rounded-[30px] bg-[linear-gradient(160deg,rgba(46,204,113,0.14),rgba(0,24,38,0.86))] p-6 md:p-7 text-white">
+            <div className="rounded-[30px] p-6 md:p-7 text-white">
               <h3 className="text-xl font-display font-semibold text-white">Performance Properties</h3>
               <div className="mt-6 space-y-6">
                 {performance.map((section) => (
@@ -139,6 +165,39 @@ export function TechnologyComparison() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="rounded-[40px] border border-[#00B4D8]/30 bg-[#00B4D8]/8 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">
+          <div className="rounded-[38px] bg-[#001826]/85 p-8 md:p-10 text-white">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="h-3 w-3 rounded-full bg-[#00B4D8]" />
+              <p className="text-xs uppercase tracking-[0.35em] text-white/60">Video</p>
+            </div>
+            <h3 className="text-2xl md:text-3xl font-display font-semibold mb-2">Aquaphobix Overview</h3>
+            <p className="text-base text-white/70 mb-7">
+              See how Aquaphobix marine coating technology delivers superior protection and performance for vessels of all sizes.
+            </p>
+            {videoUrl ? (
+              <div className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[#000f1d] shadow-[0_25px_60px_rgba(0,0,0,0.45)]">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(110,208,255,0.22),transparent_55%),radial-gradient(circle_at_80%_30%,rgba(0,180,216,0.18),transparent_50%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-[#00111f]/70" />
+                <div className="relative aspect-video">
+                  <iframe
+                    className="h-full w-full rounded-3xl"
+                    src={videoUrl}
+                    title="Aquaphobix overview video"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className="rounded-3xl border border-dashed border-white/20 bg-white/5 p-12 text-center text-white/60">
+                No video available.
+              </div>
+            )}
           </div>
         </div>
       </div>
