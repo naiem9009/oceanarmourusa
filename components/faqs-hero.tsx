@@ -20,18 +20,7 @@ export function FaqsHero() {
             <p className="text-lg text-white/70 max-w-2xl">
               Everything you need to know about Aquaphobix performance, shipyard application, and long-term maintenance.
             </p>
-            <div className="grid grid-cols-2 gap-3 text-xs uppercase tracking-[0.28em] text-white/80">
-              <span className="rounded-full border border-[#00B4D8]/45 bg-[#00B4D8]/20 px-4 py-2 text-center">Performance</span>
-              <span className="rounded-full border border-[#2ECC71]/45 bg-[#2ECC71]/20 px-4 py-2 text-center">Application</span>
-              <span className="rounded-full border border-[#6ed0ff]/45 bg-[#6ed0ff]/20 px-4 py-2 text-center">Service Area</span>
-              <span className="rounded-full border border-[#00B4D8]/35 bg-[#00B4D8]/15 px-4 py-2 text-center">Warranty</span>
-            </div>
-            <Button
-              asChild
-              className="border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
-            >
-              <Link href="/contact">Talk to a Team Member</Link>
-            </Button>
+
           </div>
 
           <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">

@@ -10,13 +10,20 @@ const colorOptions = [
 export function TechnologyOverview() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
+      <div className="flex flex-col items-center gap-2 mb-16">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-display text-white">
+          Aquaphobix
+        </h2>
+        <p className="text-base sm:text-lg text-[#00B4D8] font-semibold">
+          Advanced Thermoplastic Powder Coating System
+        </p>
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="space-y-6 text-white">
             
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold leading-tight">
               A breakthrough in marine coating technology.
             </h2>
             <p className="text-lg text-white/75">

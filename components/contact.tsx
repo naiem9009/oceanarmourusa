@@ -81,7 +81,7 @@ export function Contact() {
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-12">
-          <p className="text-xs uppercase tracking-[0.35em] text-white/60">Contact</p>
+          <p className="text-md uppercase tracking-[0.35em] text-white/60">Contact Us</p>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-semibold text-white">
             Start your Aquaphobix consultation.
           </h2>

@@ -27,19 +27,9 @@ const faqs = [
       'Recommended thickness is 15-20 mils, with theoretical coverage of 10-15 sq ft per lb depending on substrate and conditions.',
   },
   {
-    question: 'What surface preparation is required?',
-    answer:
-      'Substrates should be grit/media blast-cleaned and free of grease, oil, rust, and mill scale. Sanding, grinding, or chemical etching may be required.',
-  },
-  {
     question: 'How does it perform in corrosion testing?',
     answer:
       'Salt fog resistance on steel is reported after 5,000 hours (ASTM B117), with rust and blistering ratings of 10 and adhesion over 1200 PSI on steel.',
-  },
-  {
-    question: 'How should the product be stored?',
-    answer:
-      'Store in a clean, dry area below 77 F. Shelf life is listed as infinite when sealed with a desiccant packet.',
   },
   {
     question: 'What service areas do you cover?',
@@ -135,18 +125,33 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
 
         <div className="mt-12">
           <div className="rounded-3xl border border-[#2ECC71]/30 bg-[#2ECC71]/10 p-6 md:p-7 text-white">
-            <h3 className="text-xl font-display font-semibold">Need a deeper dive?</h3>
-            <p className="text-sm text-white/70">
-              We can walk you through technical specs, prep requirements, and maintenance planning for your vessel.
-            </p>
-            {showCta && (
-              <Button
-                asChild
-                className="mt-6 border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
-              >
-                <Link href="/contact">Contact Our Team</Link>
-              </Button>
-            )}
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <div>
+                <h3 className="text-xl font-display font-semibold">Need a deeper dive?</h3>
+                <p className="text-sm text-white/70">
+                  We can walk you through technical specs, prep requirements, and maintenance planning for your vessel.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a
+                  href="tel:+15615690936"
+                  className="inline-flex items-center justify-center gap-2 border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors whitespace-nowrap"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  Talk to a Team Member
+                </a>
+                {showCta && (
+                  <Button
+                    asChild
+                    className="border border-[#00B4D8] text-white font-semibold rounded-full h-11 px-6 bg-transparent hover:bg-[#00B4D8]/10 transition-colors"
+                  >
+                    <Link href="/contact">Contact Our Team</Link>
+                  </Button>
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </div>
