@@ -2,7 +2,7 @@ import React from "react"
 import type { Metadata, Viewport } from 'next'
 import { Cormorant_Garamond, Manrope } from 'next/font/google'
 
-import './globals.css'
+import '../globals.css'
 
 const manrope = Manrope({
   subsets: ['latin'],
@@ -25,7 +25,7 @@ export const viewport: Viewport = {
   themeColor: '#003B73',
 }
 
-export default function RootLayout({
+export default function SiteLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
