@@ -1,5 +1,4 @@
 /** @type {import('next').NextConfig} */
-import { withPayload } from '@payloadcms/next/withPayload'
 const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
@@ -9,4 +8,4 @@ const nextConfig = {
   },
 }
 
-export default withPayload(nextConfig, { configPath: './payload.config.ts' })
+export default nextConfig

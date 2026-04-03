@@ -1,11 +1,18 @@
 import type { Metadata } from 'next'
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import { client } from '@/sanity/lib/client'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { GalleryHero } from '@/components/gallery-hero'
 import { GalleryGrid } from '@/components/gallery-grid'
-import type { Media } from '@/payload-types'
+
+export const revalidate = 60 // re-fetch from Sanity every 60 seconds
+
+const GALLERY_QUERY = `*[_type == "galleryItem"] | order(coalesce(order, 9999) asc, _createdAt desc) {
+  _id,
+  alt,
+  category,
+  "url": image.asset->url
+}`
 
 export const metadata: Metadata = {
   title: 'Gallery | Ocean Armour',
@@ -13,24 +20,16 @@ export const metadata: Metadata = {
 }
 
 export default async function GalleryPage() {
-  const payload = await getPayload({ config })
+  const items = await client.fetch(GALLERY_QUERY)
 
-  const { docs: items } = await payload.find({
-    collection: 'gallery-items',
-    depth: 1,
-    limit: 200,
-    sort: '-createdAt',
-  })
-
-  const images = items.map((item) => {
-    const media = item.image as Media
-    return {
-      id: item.id,
-      url: media?.url ?? '',
-      alt: media?.alt ?? '',
+  const images = (items ?? [])
+    .filter((item: any) => item.url)
+    .map((item: any) => ({
+      id: item._id as string,
+      url: item.url as string,
+      alt: (item.alt as string) ?? '',
       category: (item.category as string) ?? 'application',
-    }
-  }).filter((img) => img.url)
+    }))
 
   return (
     <>
