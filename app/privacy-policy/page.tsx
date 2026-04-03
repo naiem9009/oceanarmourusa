@@ -1,6 +1,5 @@
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
-import { SectionBackground } from '@/components/section-background'
 import type { Metadata } from 'next'
 
 const updatedOn = 'March 4, 2026'
@@ -65,7 +64,6 @@ export default function PrivacyPolicyPage() {
       <Header />
 
       <section className="relative overflow-hidden bg-[#000c18] pt-32 pb-20 lg:pb-24">
-        <SectionBackground />
 
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
           <div className="rounded-[32px] border border-white/10 bg-[#001a2a]/70 p-6 md:p-10 shadow-[0_30px_70px_rgba(0,0,0,0.4)] backdrop-blur">

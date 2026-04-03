@@ -1,11 +1,9 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { SectionBackground } from '@/components/section-background'
 
 export function FaqsHero() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] pt-32 pb-16">
-      <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">

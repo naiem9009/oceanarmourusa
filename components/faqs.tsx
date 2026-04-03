@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { Button } from '@/components/ui/button'
-import { SectionBackground } from '@/components/section-background'
 
 const faqs = [
   {
@@ -49,7 +48,6 @@ export function Faqs({ limit, showCta = false, showHeader = true }: FaqsProps) {
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {showHeader ? (

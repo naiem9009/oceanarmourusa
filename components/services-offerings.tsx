@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { SectionBackground } from '@/components/section-background'
 import { Droplet, Gauge, ShieldCheck, Wrench, CheckCircle2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
@@ -80,7 +79,6 @@ const serviceCardStyles = [
 export function ServicesOfferings() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 space-y-4">

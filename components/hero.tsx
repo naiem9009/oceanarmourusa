@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import { ShieldCheck, Leaf, Sun, Droplet } from 'lucide-react'
-import heroImage from '@/public/images/hero_oceanarmour_boat_work.webp'
 
 const highlights = [
   {
@@ -32,11 +31,10 @@ export function Hero() {
     <section className="relative min-h-[90vh] overflow-hidden pt-8 sm:pt-12 lg:pt-16 text-white">
       <div className="absolute inset-0">
         <Image
-          src={heroImage}
+          src={"/images/hero_oceanarmour_boat_work.jpeg"}
           alt="Ocean Armour marine coating application on boat hull"
           fill
           priority
-          placeholder="blur"
           quality={80}
           fetchPriority="high"
           sizes="100vw"
@@ -44,7 +42,6 @@ export function Hero() {
           style={{ objectPosition: 'center' }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#00111f]/65 via-[#001f3f]/55 to-[#00111f]/70" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(66,177,220,0.22),transparent_60%)]" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">

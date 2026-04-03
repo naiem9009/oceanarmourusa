@@ -1,4 +1,3 @@
-import { SectionBackground } from '@/components/section-background'
 import { Leaf, ShieldCheck, Timer, Wrench } from 'lucide-react'
 
 const values = [
@@ -50,7 +49,6 @@ const valueCardStyles = [
 export function AboutValues() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12 space-y-4">

@@ -1,10 +1,8 @@
-import { SectionBackground } from '@/components/section-background'
 import { Anchor, ShieldCheck, Sun, Timer } from 'lucide-react'
 
 export function AboutStory() {
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">

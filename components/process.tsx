@@ -1,6 +1,5 @@
 'use client'
 
-import { SectionBackground } from '@/components/section-background'
 import { Anchor, CheckCircle2, Droplet, ShieldCheck, Wrench } from 'lucide-react'
 
 const steps = [
@@ -33,7 +32,6 @@ const steps = [
 export function Process() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">

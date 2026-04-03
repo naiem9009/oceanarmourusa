@@ -4,13 +4,7 @@ import Image from 'next/image'
 
 export function AquaphobixSection() {
   return (
-    <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18] mt-10">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -right-40 top-20 h-80 w-80 rounded-full bg-[#00B4D8]/10 blur-3xl" />
-        <div className="absolute -left-40 bottom-20 h-80 w-80 rounded-full bg-[#2ECC71]/10 blur-3xl" />
-      </div>
-
+    <section className="relative py-10 sm:py-16 lg:py-20 bg-gradient-to-br from-[#003B73] via-[#001a2e] to-[#000c18]">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Center content */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto">

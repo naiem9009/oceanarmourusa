@@ -3,7 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ArrowUpRight, Menu, Phone, X } from "lucide-react"
-import { useEffect, useState, useRef } from "react"
+import { useEffect, useState } from "react"
 
 import { Button } from "@/components/ui/button"
 
@@ -18,8 +18,6 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
-  const isHomePage = pathname === "/"
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     setIsMobileMenuOpen(false)
@@ -43,30 +41,17 @@ export function Header() {
   }, [isMobileMenuOpen])
 
   useEffect(() => {
-    if (!isHomePage) {
-      setIsScrolled(true)
-      return
-    }
-
     const handleScroll = () => {
-      const scrolled = window.scrollY > 50
-      setIsScrolled(scrolled)
-
-      // Debounce rapid scroll events
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current)
-      }
+      setIsScrolled(window.scrollY > 50)
     }
 
+    handleScroll()
     window.addEventListener("scroll", handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener("scroll", handleScroll)
-      if (scrollTimeoutRef.current) {
-        clearTimeout(scrollTimeoutRef.current)
-      }
     }
-  }, [isHomePage])
+  }, [pathname])
 
   const phoneNumber = "561-569-0936"
   const phoneHref = "tel:+15615690936"
@@ -75,7 +60,7 @@ export function Header() {
     <>
       <header
         className={`fixed left-0 right-0 top-0 z-40 transition-all duration-300 ${
-          isScrolled || !isHomePage
+          isScrolled
             ? "bg-gradient-to-r from-[#003B73]/90 via-[#001a2e]/90 to-[#000c18]/90 border-b border-[#00B4D8]/30 shadow-lg backdrop-blur-sm"
             : "bg-transparent border-b border-transparent"
         }`}
@@ -144,7 +129,7 @@ export function Header() {
              </Button>
           </div>
         </div>
-        {(isScrolled || !isHomePage) && (
+        {isScrolled && (
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[#00B4D8]/20" />
         )}
       </header>

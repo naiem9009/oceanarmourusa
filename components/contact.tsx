@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useState } from 'react'
-import { SectionBackground } from '@/components/section-background'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
@@ -77,7 +76,6 @@ export function Contact() {
 
   return (
     <section className="relative overflow-hidden bg-[#000c18] py-24 lg:py-28">
-      <SectionBackground />
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-4 mb-12">

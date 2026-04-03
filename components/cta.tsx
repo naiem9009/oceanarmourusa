@@ -1,12 +1,10 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { SectionBackground } from '@/components/section-background'
 import { ArrowRight, Mail, Phone } from 'lucide-react'
 
 export function CTA() {
   return (
     <section id="cta" className="relative overflow-hidden bg-transparent py-24 lg:py-28">
-      <SectionBackground />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_40px_90px_rgba(0,180,216,0.2)]">
           <div className="rounded-[30px] bg-[#001826]/85 p-8 md:p-12 text-white md:backdrop-blur">

@@ -4,8 +4,7 @@
 
 body {
   font-family: var(--font-sans);
-  background: radial-gradient(circle at top, rgba(0, 73, 128, 0.45), transparent 55%),
-    linear-gradient(180deg, rgba(0, 18, 36, 0.98) 0%, rgba(0, 41, 73, 0.95) 45%, rgba(0, 59, 115, 0.9) 100%);
+  background-color: #000c18;
   min-height: 100%;
 }
 
