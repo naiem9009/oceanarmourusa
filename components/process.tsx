@@ -1,5 +1,3 @@
-'use client'
-
 import { Anchor, CheckCircle2, Droplet, ShieldCheck, Wrench } from 'lucide-react'
 
 const steps = [

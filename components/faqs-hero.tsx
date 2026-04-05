@@ -23,7 +23,7 @@ export function FaqsHero() {
 
           <div className="rounded-[32px] border border-[#00B4D8]/30 bg-[#00B4D8]/10 p-[1px] shadow-[0_30px_70px_rgba(0,180,216,0.2)]">
             <div className="rounded-[30px] bg-[#001826]/85 p-6 md:p-8">
-              <h2 className="text-xl font-semibold">Quick Facts</h2>
+              <h3 className="text-xl font-semibold">Quick Facts</h3>
               <div className="mt-5 space-y-4 text-sm text-white/70">
                 <div className="flex items-center justify-between border-b border-white/10 pb-3">
                   <span>Warranty</span>

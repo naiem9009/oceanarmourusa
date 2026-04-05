@@ -1,7 +1,7 @@
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
+const SITE_URL = 'https://oceanarmourusa.com'
 const updatedOn = 'March 4, 2026'
 
 const policySections = [
@@ -56,12 +56,32 @@ const policySections = [
 export const metadata: Metadata = {
   title: 'Privacy Policy | Ocean Armour',
   description: 'Learn how Ocean Armour collects, uses, and protects personal information.',
+  alternates: {
+    canonical: `${SITE_URL}/privacy-policy`,
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Privacy Policy', item: `${SITE_URL}/privacy-policy` },
+  ],
 }
 
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <Header />
+      <Script
+        id="schema-breadcrumb-privacy"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       <section className="relative overflow-hidden bg-[#000c18] pt-32 pb-20 lg:pb-24">
 
@@ -95,8 +115,6 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   )
 }

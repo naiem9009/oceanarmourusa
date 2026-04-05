@@ -92,7 +92,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
       {filtered.length === 0 ? (
         <div className="flex items-center justify-center py-24">
           <div className="rounded-2xl border border-white/10 bg-white/5 px-10 py-14 text-center max-w-sm">
-            <p className="text-white/40 text-base">No photos in this category yet.</p>
+            <p className="text-white/40 text-base">Project photos coming Soon</p>
           </div>
         </div>
       ) : (

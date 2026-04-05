@@ -103,6 +103,11 @@ export function Footer() {
             <h4 className="text-lg md:text-xl font-display font-semibold mb-4">Explore</h4>
             <ul className="space-y-3 text-sm text-white/70">
               <li>
+                <Link href="/gallery" className="transition hover:text-[#6ed0ff]">
+                  Gallery
+                </Link>
+              </li>
+              <li>
                 <Link href="/technology" className="transition hover:text-[#6ed0ff]">
                   Technology
                 </Link>

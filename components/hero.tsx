@@ -1,7 +1,6 @@
-"use client"
-
 import Image from 'next/image'
-import { ShieldCheck, Leaf, Sun, Droplet } from 'lucide-react'
+import Link from 'next/link'
+import { ShieldCheck, Leaf, Sun, Droplet, ArrowUpRight } from 'lucide-react'
 
 const highlights = [
   {
@@ -65,6 +64,22 @@ export function Hero() {
             <p className="text-lg text-white/80 leading-relaxed max-w-2xl">
               We are the licensed dealer and certified applicator of Aquaphobix, an advanced underwater marine coating system. We specialize in providing this high-performance, eco-friendly alternative to vessels of all sizes in Broward and Palm Beach Counties.
             </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#00B4D8] hover:bg-[#00B4D8]/85 px-8 py-3.5 text-base font-semibold text-white transition-colors"
+            >
+              Get a Free Consultation
+              <ArrowUpRight className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/services"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/5 hover:bg-white/10 px-8 py-3.5 text-base font-semibold text-white transition-colors"
+            >
+              View Our Services
+            </Link>
           </div>
         </div>
 

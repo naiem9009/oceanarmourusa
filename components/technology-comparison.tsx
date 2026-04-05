@@ -96,7 +96,7 @@ export function TechnologyComparison() {
             <div className="rounded-[30px] bg-[#001826]/85 p-7 md:p-8">
               <div className="flex items-start justify-between">
                 <div>
-                  <h2 className="text-xl font-semibold text-white">Technical Data Sheet</h2>
+                  <h3 className="text-xl font-semibold text-white">Technical Data Sheet</h3>
                   <p className="mt-2 text-sm text-white/70">
                     Performance specifications, application requirements, and handling guidance.
                   </p>

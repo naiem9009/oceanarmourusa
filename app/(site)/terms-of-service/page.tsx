@@ -1,7 +1,7 @@
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
+const SITE_URL = 'https://oceanarmourusa.com'
 const updatedOn = 'March 4, 2026'
 
 const termsSections = [
@@ -58,12 +58,32 @@ const termsSections = [
 export const metadata: Metadata = {
   title: 'Terms of Service | Ocean Armour',
   description: 'Review terms governing use of the Ocean Armour website and service requests.',
+  alternates: {
+    canonical: `${SITE_URL}/terms-of-service`,
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
+}
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Terms of Service', item: `${SITE_URL}/terms-of-service` },
+  ],
 }
 
 export default function TermsOfServicePage() {
   return (
     <>
-      <Header />
+      <Script
+        id="schema-breadcrumb-terms"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       <section className="relative overflow-hidden bg-[#000c18] pt-32 pb-20 lg:pb-24">
 
@@ -97,8 +117,6 @@ export default function TermsOfServicePage() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   )
 }

@@ -54,17 +54,13 @@ export function Header() {
 
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-              {/* <Image
-                src="/images/ocean-armour-logo.webp"
+              <Image
+                src="/images/ocean-armour-text-logo.png"
                 alt="Ocean Armour"
-                width={36}
-                height={36}
-                className="w-8 h-8 object-contain"
-              /> */}
-              <span className="text-white font-bold text-lg tracking-tight leading-none">
-                Ocean<br />
-                <span className="text-[#6ed0ff]">Armour</span>
-              </span>
+                width={130}
+                height={100}
+                className="object-contain"
+              />
             </Link>
 
             {/* Desktop Nav */}

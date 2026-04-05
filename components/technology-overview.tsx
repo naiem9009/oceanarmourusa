@@ -19,11 +19,10 @@ export function TechnologyOverview() {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        {/* Text Section */}
         <div className="max-w-3xl mx-auto text-center space-y-6 text-white">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold leading-tight">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display font-semibold leading-tight">
             A breakthrough in marine coating technology.
-          </h2>
+          </h3>
           <p className="text-lg text-white/75">
             Aquaphobix is a functionalized polyethylene copolymer thermoplastic powder coating engineered to deliver
             long-lasting corrosion protection in marine environments.
