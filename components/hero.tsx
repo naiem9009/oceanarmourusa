@@ -15,7 +15,7 @@ const highlights = [
   },
   {
     title: 'Hydrodynamic Efficiency',
-    description: 'Reduces drag and improves fuel efficiency across all vessel sizes.',
+    description: 'Reduces drag and can improve fuel efficiency across all vessel sizes.',
     icon: Sun,
   },
   {
@@ -66,7 +66,7 @@ export function Hero() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4">
+          {/* <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-[#00B4D8] hover:bg-[#00B4D8]/85 px-8 py-3.5 text-base font-semibold text-white transition-colors"
@@ -80,7 +80,7 @@ export function Hero() {
             >
               View Our Services
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">

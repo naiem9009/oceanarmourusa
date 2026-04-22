@@ -1,6 +1,7 @@
 import { Hero } from '@/components/hero'
 import { Process } from '@/components/process'
 import { Stats } from '@/components/stats'
+import { VideoSection } from '@/components/video-section'
 import type { Metadata } from 'next'
 import Script from 'next/script'
 
@@ -53,6 +54,7 @@ export default function HomePage() {
       <Hero />
       <Stats />
       <Process />
+      <VideoSection />
     </>
   )
 }

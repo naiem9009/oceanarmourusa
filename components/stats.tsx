@@ -7,7 +7,6 @@ const stats = [
   {
     icon: null,
     value: '100% Eco-Friendly',
-    label: 'Certified',
     detail: 'The only certified marine-life-safe product on the market, protecting our oceans.',
     color: '#2ECC71',
     customIcon: true,
@@ -15,13 +14,11 @@ const stats = [
   {
     icon: Sun,
     value: '3000-Hour',
-    label: 'UV Tested',
     detail: 'Verified performance retention under harsh sun exposure.',
     color: '#00B4D8',
   },
   {
     icon: Anchor,
-    value: '850 PSI',
     label: 'Bond Strength',
     detail: 'High-adhesion system built for long-term durability.',
     color: '#2ECC71',
@@ -29,8 +26,7 @@ const stats = [
   {
     icon: Droplet,
     value: 'Works On',
-    label: 'Aluminum, Steel',
-    detail: 'Aluminum, Steel, Fiberglass',
+    detail: 'Fiberglass, Aluminum and Steel',
     color: '#00B4D8',
     highlight: true,
   }
@@ -47,9 +43,9 @@ export function Stats() {
             <Image
               src="/images/AQUAPHOBIX_LOGO.png"
               alt="Aquaphobix Logo"
-              width={200}
-              height={80}
-              className="w-72 h-20 sm:w-56 sm:h-36 lg:w-80 lg:h-40 object-contain mx-auto"
+              width={500}
+              height={100}
+              className="object-contain mx-auto"
             />
           </div>
           <p className="text-xs uppercase tracking-[0.35em] text-white/75 mb-4">Discover the Aquaphobix Advantage</p>

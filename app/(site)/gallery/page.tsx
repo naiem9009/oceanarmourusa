@@ -42,6 +42,37 @@ export const metadata: Metadata = {
   },
 }
 
+const LOCAL_VIDEOS = [
+  {
+    id: 'local-video-work-process',
+    url: '/images/oceanarmour_work_process.mp4',
+    alt: 'Ocean Armour coating work process in action',
+    category: 'process',
+    type: 'video' as const,
+  },
+  {
+    id: 'local-video-work-process-2',
+    url: '/images/oceanarmour_work_process_2.MOV',
+    alt: 'Ocean Armour marine coating process close-up',
+    category: 'process',
+    type: 'video' as const,
+  },
+  {
+    id: 'local-video-feature-1',
+    url: '/assets/video-1.mov',
+    alt: 'Aquaphobix marine coating project video highlight',
+    category: 'application',
+    type: 'video' as const,
+  },
+  {
+    id: 'local-video-feature-2',
+    url: '/assets/video-2.mov',
+    alt: 'Finished vessel with Ocean Armour coating',
+    category: 'vessel',
+    type: 'video' as const,
+  },
+]
+
 const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -54,14 +85,18 @@ const breadcrumbSchema = {
 export default async function GalleryPage() {
   const items = await client.fetch(GALLERY_QUERY)
 
-  const images = (items ?? [])
+const images = (items ?? [])
     .filter((item: any) => item.url)
     .map((item: any) => ({
       id: item._id as string,
       url: item.url as string,
       alt: (item.alt as string) ?? '',
-      category: (item.category as string) ?? 'application',
+      category: 'gallery',
+      type: 'image' as const,
     }))
+
+  const media = [...LOCAL_VIDEOS, ...images]
+  const allMedia = media.map((item, index) => ({ ...item, id: `${item.id}-${index}` }))
 
   return (
     <>
@@ -73,7 +108,7 @@ export default async function GalleryPage() {
       <GalleryHero />
       <section className="py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <GalleryGrid images={images} />
+          <GalleryGrid images={allMedia} />
         </div>
       </section>
     </>

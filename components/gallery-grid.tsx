@@ -1,30 +1,26 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
-import { ChevronLeft, ChevronRight, X, ZoomIn } from "lucide-react"
+import { ChevronLeft, ChevronRight, Play, X, ZoomIn } from "lucide-react"
 
 type GalleryImage = {
   id: string | number
   url: string
   alt: string
   category: string
+  type?: "image" | "video"
 }
 
-const CATEGORIES = [
-  { value: "all", label: "All" },
-  { value: "application", label: "Application" },
-  { value: "before-after", label: "Before & After" },
-  { value: "vessel", label: "Vessel" },
-  { value: "process", label: "Process" },
-]
-
 export function GalleryGrid({ images }: { images: GalleryImage[] }) {
-  const [activeCategory, setActiveCategory] = useState("all")
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
-  const filtered = activeCategory === "all"
-    ? images
-    : images.filter((img) => img.category === activeCategory)
+  const sortedImages = [...images].sort((a, b) => {
+    if (a.type === "video" && b.type !== "video") return -1
+    if (a.type !== "video" && b.type === "video") return 1
+    return 0
+  })
+
+  const filtered = sortedImages
 
   const isOpen = lightboxIndex !== null
   const current = isOpen ? filtered[lightboxIndex] : null
@@ -57,7 +53,7 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
     return () => { document.body.style.overflow = "" }
   }, [isOpen])
 
-  // Close lightbox if filtered set changes and index is out of range
+  // Close lightbox if media set changes and index is out of range
   useEffect(() => {
     if (lightboxIndex !== null && lightboxIndex >= filtered.length) {
       setLightboxIndex(filtered.length > 0 ? 0 : null)
@@ -66,28 +62,6 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
 
   return (
     <>
-      {/* Category Filters */}
-      <div className="flex flex-wrap items-center gap-2 mb-10">
-        {CATEGORIES.filter((c) =>
-          c.value === "all" || images.some((img) => img.category === c.value)
-        ).map((cat) => (
-          <button
-            key={cat.value}
-            onClick={() => setActiveCategory(cat.value)}
-            className={`rounded-full px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] transition-all duration-200 ${
-              activeCategory === cat.value
-                ? "bg-[#00B4D8] text-white shadow-[0_0_16px_rgba(0,180,216,0.35)]"
-                : "border border-white/15 bg-white/5 text-white/55 hover:border-white/25 hover:text-white"
-            }`}
-          >
-            {cat.label}
-          </button>
-        ))}
-        <span className="ml-auto text-xs text-white/30">
-          {filtered.length} photo{filtered.length !== 1 ? "s" : ""}
-        </span>
-      </div>
-
       {/* Grid */}
       {filtered.length === 0 ? (
         <div className="flex items-center justify-center py-24">
@@ -103,19 +77,32 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
               className="break-inside-avoid group relative overflow-hidden rounded-xl cursor-zoom-in"
               onClick={() => setLightboxIndex(index)}
             >
-              <img
-                src={img.url}
-                alt={img.alt}
-                className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                loading="lazy"
-              />
+              {img.type === "video" && (
+                <video
+                  src={img.url}
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  muted
+                  loop
+                  autoPlay
+                  playsInline
+                  preload="metadata"
+                />
+              )}
+              {img.type !== "video" && (
+                <img
+                  src={img.url}
+                  alt={img.alt}
+                  className="w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  loading="lazy"
+                />
+              )}
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-between p-4">
                 <span className="rounded-full border border-white/25 bg-white/10 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white/80 backdrop-blur-sm">
-                  {CATEGORIES.find((c) => c.value === img.category)?.label ?? img.category}
+                  {img.type === "video" ? "Video" : "Photo"}
                 </span>
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm text-white">
-                  <ZoomIn className="h-3.5 w-3.5" />
+                  {img.type === "video" ? <Play className="h-3.5 w-3.5" /> : <ZoomIn className="h-3.5 w-3.5" />}
                 </span>
               </div>
             </div>
@@ -164,14 +151,26 @@ export function GalleryGrid({ images }: { images: GalleryImage[] }) {
             className="relative z-10 max-h-[85vh] max-w-[90vw] flex flex-col items-center gap-3"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              key={current.url}
-              src={current.url}
-              alt={current.alt}
-              className="max-h-[80vh] max-w-[88vw] rounded-xl object-contain shadow-[0_32px_80px_rgba(0,0,0,0.7)]"
-            />
+            {current.type === "video" ? (
+              <video
+                key={current.url}
+                src={current.url}
+                className="max-h-[80vh] max-w-[88vw] rounded-xl object-contain shadow-[0_32px_80px_rgba(0,0,0,0.7)]"
+                controls
+                autoPlay
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              <img
+                key={current.url}
+                src={current.url}
+                alt={current.alt}
+                className="max-h-[80vh] max-w-[88vw] rounded-xl object-contain shadow-[0_32px_80px_rgba(0,0,0,0.7)]"
+              />
+            )}
             <span className="rounded-full border border-white/15 bg-white/8 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-white/60 backdrop-blur-sm">
-              {CATEGORIES.find((c) => c.value === current.category)?.label ?? current.category}
+              {current.type === "video" ? "Video" : "Photo"}
             </span>
           </div>
         )}
