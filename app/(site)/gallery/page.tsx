@@ -11,7 +11,6 @@ export const revalidate = 60
 const GALLERY_QUERY = `*[_type == "galleryItem"] | order(coalesce(order, 9999) asc, _createdAt desc) {
   _id,
   alt,
-  category,
   "url": image.asset->url
 }`
 
@@ -46,21 +45,18 @@ const LOCAL_VIDEOS = [
     id: 'local-video-work-process',
     url: '/images/oceanarmour_work_process.mp4',
     alt: 'Ocean Armour coating work process in action',
-    category: 'process',
     type: 'video' as const,
   },
   {
     id: 'local-video-feature-1',
     url: '/assets/video-1.mov',
     alt: 'Aquaphobix marine coating project video highlight',
-    category: 'application',
     type: 'video' as const,
   },
   {
     id: 'local-video-feature-2',
     url: '/assets/video-2.mov',
     alt: 'Finished vessel with Ocean Armour coating',
-    category: 'vessel',
     type: 'video' as const,
   },
 ]
@@ -77,13 +73,12 @@ const breadcrumbSchema = {
 export default async function GalleryPage() {
   const items = await client.fetch(GALLERY_QUERY)
 
-const images = (items ?? [])
+  const images = (items ?? [])
     .filter((item: any) => item.url)
     .map((item: any) => ({
       id: item._id as string,
       url: item.url as string,
       alt: (item.alt as string) ?? '',
-      category: 'gallery',
       type: 'image' as const,
     }))
 

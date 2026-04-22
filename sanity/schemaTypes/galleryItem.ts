@@ -19,20 +19,6 @@ export const galleryItem = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'category',
-      title: 'Category',
-      type: 'string',
-      options: {
-        list: [
-          { title: 'Application', value: 'application' },
-          { title: 'Before & After', value: 'before-after' },
-          { title: 'Vessel', value: 'vessel' },
-          { title: 'Process', value: 'process' },
-        ],
-      },
-      initialValue: 'application',
-    }),
-    defineField({
       name: 'order',
       title: 'Display Order',
       type: 'number',
@@ -54,7 +40,7 @@ export const galleryItem = defineType({
   preview: {
     select: {
       title: 'alt',
-      subtitle: 'category',
+      subtitle: 'order',
       media: 'image',
     },
   },

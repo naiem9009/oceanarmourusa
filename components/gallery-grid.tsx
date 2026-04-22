@@ -7,7 +7,6 @@ type GalleryImage = {
   id: string | number
   url: string
   alt: string
-  category: string
   type?: "image" | "video"
 }
 
