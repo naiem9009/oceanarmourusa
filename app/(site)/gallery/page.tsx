@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import { client } from '@/sanity/lib/client'
 import { GalleryHero } from '@/components/gallery-hero'
 import { GalleryGrid } from '@/components/gallery-grid'
-import { CTA } from '@/components/cta'
 import Script from 'next/script'
 
 const SITE_URL = 'https://oceanarmourusa.com'
@@ -47,13 +46,6 @@ const LOCAL_VIDEOS = [
     id: 'local-video-work-process',
     url: '/images/oceanarmour_work_process.mp4',
     alt: 'Ocean Armour coating work process in action',
-    category: 'process',
-    type: 'video' as const,
-  },
-  {
-    id: 'local-video-work-process-2',
-    url: '/images/oceanarmour_work_process_2.MOV',
-    alt: 'Ocean Armour marine coating process close-up',
     category: 'process',
     type: 'video' as const,
   },
